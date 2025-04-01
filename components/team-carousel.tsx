@@ -6,110 +6,97 @@ import { TeamMemberCard } from "./team-member-card"
 
 interface TeamMember {
   name: string
+  role: string
+  description: string
   imageSrc: string
   twitterUrl?: string
   instagramUrl?: string
 }
 
 interface TeamCarouselProps {
-  members: TeamMember[]
-  autoSlideInterval?: number // Time in ms between slides
+  teamMembers: TeamMember[]
 }
 
-export function TeamCarousel({ members, autoSlideInterval = 3000 }: TeamCarouselProps) {
+export function TeamCarousel({ teamMembers }: TeamCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [visibleCount, setVisibleCount] = useState(5)
-  const [isPaused, setIsPaused] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  // Determine how many cards to show based on container width
-  useEffect(() => {
-    const updateVisibleCount = () => {
-      if (window.innerWidth < 640) {
-        setVisibleCount(1)
-      } else if (window.innerWidth < 768) {
-        setVisibleCount(2)
-      } else if (window.innerWidth < 1024) {
-        setVisibleCount(3)
-      } else if (window.innerWidth < 1280) {
-        setVisibleCount(4)
-      } else {
-        setVisibleCount(5)
-      }
-    }
-
-    updateVisibleCount()
-    window.addEventListener("resize", updateVisibleCount)
-    return () => window.removeEventListener("resize", updateVisibleCount)
-  }, [])
-
-  // Auto-slide functionality
-  useEffect(() => {
-    if (isPaused || members.length <= visibleCount) return
-
-    const interval = setInterval(() => {
-      nextSlide()
-    }, autoSlideInterval)
-
-    return () => clearInterval(interval)
-  }, [currentIndex, visibleCount, isPaused, members.length, autoSlideInterval])
+  const [direction, setDirection] = useState<'left' | 'right'>('right')
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1 >= members.length ? 0 : prev + 1))
+    setDirection('right')
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % teamMembers.length)
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? Math.max(0, members.length - visibleCount) : prev - 1))
+    setDirection('left')
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + teamMembers.length) % teamMembers.length)
   }
 
-  // Get visible members with wrap-around
-  const getVisibleMembers = () => {
-    const result = []
-    for (let i = 0; i < visibleCount; i++) {
-      const index = (currentIndex + i) % members.length
-      result.push(members[index])
-    }
-    return result
-  }
-
-  const visibleMembers = getVisibleMembers()
+  // Create a looped array of team members for continuous scrolling
+  const displayMembers = [...teamMembers, ...teamMembers.slice(0, 3)]
 
   return (
-    <div className="relative" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+    <div className="relative">
+      {/* Carousel content */}
+      <div className="overflow-hidden">
+        <div
+          className={`flex transition-transform duration-500 ease-in-out gap-2`}
+          style={{
+            width: `${displayMembers.length * 320}px`,
+            transform: `translateX(-${(currentIndex * 320)}px)`,
+          }}
+        >
+          {displayMembers.map((member, index) => (
+            <div
+              key={`${member.name}-${index}`}
+              className="flex-shrink-0"
+              style={{ width: '320px' }}
+            >
+              <div className="flex justify-center items-center p-2">
+                <TeamMemberCard
+                  name={member.name}
+                  role={member.role}
+                  description={member.description}
+                  imageSrc={member.imageSrc}
+                  twitterUrl={member.twitterUrl}
+                  instagramUrl={member.instagramUrl}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#FFCC00] w-10 h-10 flex items-center justify-center"
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#FFCC00] p-2 z-10"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6 text-black" />
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M15 19L8 12L15 5" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </button>
-
-      <div ref={containerRef} className="flex justify-center gap-4 overflow-hidden py-4 px-12">
-        {visibleMembers.map((member, index) => (
-          <div
-            key={`${member.name}-${index}`}
-            className="transition-all duration-500"
-            style={{ transform: `translateX(0)` }}
-          >
-            <TeamMemberCard
-              name={member.name}
-              imageSrc={member.imageSrc}
-              twitterUrl={member.twitterUrl}
-              instagramUrl={member.instagramUrl}
-            />
-          </div>
-        ))}
-      </div>
-
       <button
         onClick={nextSlide}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#FFCC00] w-10 h-10 flex items-center justify-center"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#FFCC00] p-2 z-10"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6 text-black" />
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M9 5L16 12L9 19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </button>
     </div>
   )
 }
-

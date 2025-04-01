@@ -419,7 +419,7 @@ export default function OurGoalPage() {
                   </h2>
                   <div className="max-w-3xl space-y-4 sm:space-y-6">
                     <p className="text-white text-base sm:text-lg animate-text">
-                      Are a Black or minority entrepreneur in the UK? Have you faced challenges with funding, property
+                      Are you a Black or minority entrepreneur in the UK? Have you faced challenges with funding, property
                       access, or restrictive policies?
                     </p>
                     <p className="text-white text-base sm:text-lg mb-8 sm:mb-10 animate-text">

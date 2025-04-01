@@ -16,48 +16,29 @@ const passionOne = Passion_One({
 // Team member data
 const founders = [
   {
-    name: "Frank Alabi",
-    imageSrc: "/images/team-members/frank-alabi.jpeg",
+    name: "Ken",
+    role: "Entrepreneur",
+    description: "Focused on creating sustainable economic opportunities within the Black community.",
+    imageSrc: "/images/team-members/ousmane-diop.jpeg"
   },
   {
-    name: "Srae Edwards",
-    imageSrc: "/images/team-members/srae-edwards.jpeg",
+    name: "Eyinnaya",
+    role: "Research & Campaigns Expert",
+    description: "Specializes in identifying and dismantling systemic barriers to economic growth.",
+    imageSrc: "/images/team-members/papa-ndiour.jpeg"
   },
   {
-    name: "Annette Black",
-    imageSrc: "/images/team-members/annette-black.jpeg",
+    name: "Sophia",
+    role: "Professor & Policy Expert",
+    description: "Brings academic expertise and policy insights to cooperative development.",
+    imageSrc: "/images/team-members/maimouna.jpeg"
   },
   {
-    name: "Robert Fox",
-    imageSrc: "/images/team-members/robert-fox.jpeg",
-  },
-  {
-    name: "Wade Warren",
-    imageSrc: "/images/team-members/wade-warren.jpeg",
-  },
-]
-
-const members = [
-  {
-    name: "Ousmane Diop",
-    imageSrc: "/images/team-members/ousmane-diop.jpeg",
-  },
-  {
-    name: "Papa Ndiour",
-    imageSrc: "/images/team-members/papa-ndiour.jpeg",
-  },
-  {
-    name: "Cheikh Moneir",
-    imageSrc: "/images/team-members/cheikh-moneir.jpeg",
-  },
-  {
-    name: "The Macina's",
-    imageSrc: "/images/team-members/the-macinas.jpeg",
-  },
-  {
-    name: "Maimouna",
-    imageSrc: "/images/team-members/maimouna.jpeg",
-  },
+    name: "Chino",
+    role: "Pharmacist & Community Health Advocate",
+    description: "Works to improve health access and economic wellbeing in Black communities.",
+    imageSrc: "/images/team-members/cheikh-moneir.jpeg"
+  }
 ]
 
 export default function MeetTheTeamPage() {
@@ -256,66 +237,7 @@ export default function MeetTheTeamPage() {
             </div>
           </div>
 
-          <TeamCarousel members={founders} autoSlideInterval={4000} />
-        </div>
-      </section>
-
-      {/* Members Section */}
-      <section className="py-16 px-4 animate-members">
-        <div className="container mx-auto">
-          <div className="mb-8">
-            <div className="inline-block bg-[#FFCC00] px-8 py-4 animate-title">
-              <h2 className="font-passion-one text-4xl">• Members</h2>
-            </div>
-          </div>
-
-          <TeamCarousel members={members} autoSlideInterval={5000} />
-        </div>
-      </section>
-
-      {/* Want to join the movement Section */}
-      <section className="py-24 sm:py-32 lg:py-36 px-4 md:px-4 lg:px-4 animate-join-movement">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative">
-            <div className="w-full h-[650px] sm:h-[700px] md:h-[750px] lg:h-[456px]">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rectangle%2022-x0GU9rBDwNboMLQejt38QPI5hcNVBI.png"
-                alt="Join the movement"
-                fill
-                className="object-cover animate-image"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/50">
-                <div className="w-[90%] sm:w-[85%] md:w-[80%] mx-auto h-full flex flex-col justify-center">
-                  <h2 className="font-passion-one text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#FFCC00] mb-6 sm:mb-8 animate-title">
-                    Want to join the movement?
-                  </h2>
-                  <div className="max-w-3xl space-y-4 sm:space-y-6">
-                    <p className="text-white text-base sm:text-lg animate-text">
-                      As a Black or minority entrepreneur in the UK, have you faced challenges with funding, property
-                      access, or restrictive policies?
-                    </p>
-                    <p className="text-white text-base sm:text-lg mb-8 sm:mb-10 animate-text">
-                      Black communities in the UK face significant challenges in cooperative ownership, from restricted
-                      funding access and biased lending to policy barriers and governance limitations. These obstacles
-                      make it harder for Black-led cooperatives to grow and sustain themselves. This initiative is
-                      committed to removing these barriers, fostering economic equity, and empowering Black entrepreneurs
-                      to build thriving cooperatives.
-                    </p>
-                    <Link
-                      href="/get-involved"
-                      className="bg-transparent hover:bg-[#FFCC00] hover:text-black text-white border-2 border-white hover:border-transparent px-8 sm:px-10 py-3 sm:py-4 rounded-full font-passion-one text-xl sm:text-2xl flex items-center justify-center gap-2 w-fit transition-all duration-300 animate-button"
-                    >
-                      Join us
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 17V7L15 12L10 17Z" fill="currentColor" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <TeamCarousel teamMembers={founders} />
         </div>
       </section>
 

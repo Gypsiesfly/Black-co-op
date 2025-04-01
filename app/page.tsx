@@ -28,11 +28,6 @@ const AnimatedCard = dynamic(() => import('@/components/animated-card').then(mod
   loading: () => <div className="h-[360px] bg-gray-100"></div>
 })
 
-const WaveDecorationSimple = dynamic(() => import('@/components/wave-decoration-simple').then(mod => mod.WaveDecorationSimple), { 
-  ssr: false,
-  loading: () => <div className="w-16 h-8"></div>
-})
-
 const LearnMoreButton = dynamic(() => import('@/components/learn-more-button').then(mod => mod.LearnMoreButton), { 
   ssr: false,
   loading: () => <div className="h-10 w-32 bg-[#FFCC00]"></div>
@@ -58,7 +53,6 @@ export default function HomePage() {
       WaveDecoration,
       KnowMoreButton,
       AnimatedCard,
-      WaveDecorationSimple,
       LearnMoreButton
     ].map(component => {
       return component.preload?.()
@@ -98,7 +92,6 @@ export default function HomePage() {
         import('@/components/wave-decoration').then(mod => mod.WaveDecoration),
         import('@/components/know-more-button').then(mod => mod.KnowMoreButton),
         import('@/components/animated-card').then(mod => mod.AnimatedCard),
-        import('@/components/wave-decoration-simple').then(mod => mod.WaveDecorationSimple),
         import('@/components/learn-more-button').then(mod => mod.LearnMoreButton)
       ]).then(() => {
         setComponentsLoaded(true)
@@ -246,7 +239,7 @@ export default function HomePage() {
                       setActiveLink(item.name)
                       setMobileMenuOpen(false)
                     }}
-                    className={`font-passion-one text-[28px] sm:text-[32px] relative z-10 block px-4 py-1 ${
+                    className={`font-passion-one text-[28px] sm:text-[32px] relative z-10 block px-4 py-1 rounded-full ${
                       item.name === "Get Involved"
                         ? "bg-[#FFCC00] text-black"
                         : "text-white"
@@ -357,18 +350,21 @@ export default function HomePage() {
       {/* Systemic Issues Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6 sm:mb-8">
-          <WaveDecoration className="w-16 sm:w-20 md:w-24 h-auto hidden sm:block" />
+          <svg className="w-16 sm:w-20 md:w-24 h-auto hidden sm:block" viewBox="0 0 100 24">
+            <path d="M0 12 Q 25 0, 50 12 T 100 12" fill="none" stroke="#FFCC00" strokeWidth="2"/>
+          </svg>
           <h2 className="text-center font-passion-one text-[50px] leading-tight max-w-4xl px-4 animate-title">
-            Despite London's diversity, Black communities remain systematically locked out of business and asset
-            ownership
+            Welcome to Black Co-op CIC, A community-driven cooperative building Black economic empowerment, one step at a time.
           </h2>
-          <WaveDecoration className="w-16 sm:w-20 md:w-24 h-auto hidden sm:block" isRight={true} />
+          <svg className="w-16 sm:w-20 md:w-24 h-auto hidden sm:block" viewBox="0 0 100 24">
+            <path d="M0 12 Q 25 24, 50 12 T 100 12" fill="none" stroke="#FFCC00" strokeWidth="2"/>
+          </svg>
         </div>
 
         <p className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 text-sm sm:text-base px-4 animate-text">
-          Black professionals likely hold less than 5-10% of leadership roles in UK cooperatives, while white
-          individuals dominate 90-95%. This 60-to-1 imbalance highlights systemic barriers to Black participation in
-          cooperative ownership and leadership, underscoring the need for greater inclusivity.
+          At Black Co-op CIC, we are pioneering a movement to establish and grow Black-led cooperative ownership in London. In a city known for its diversity, there are currently no Black-led cooperatives—a gap we are committed to filling. Our aim is to create thriving, resilient communities built on principles of collective ownership, economic equity, and mutual empowerment.
+          <br />
+          We champion a model where economic power and resources are owned, controlled, and shared by the people they serve. Through our work, we are laying the groundwork for a network of Black-led cooperatives that drive meaningful change across sectors such as housing, enterprise, community services, and more.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4">
@@ -507,7 +503,9 @@ export default function HomePage() {
       <section className="py-20 sm:py-24 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-center font-passion-one text-[36px] xs:text-[40px] sm:text-[54px] mb-4 animate-title">Who we are</h2>
         <div className="flex justify-center mb-6">
-          <WaveDecorationSimple className="w-16 sm:w-20 md:w-24 h-auto" />
+          <svg className="w-16 sm:w-20 md:w-24 h-auto" viewBox="0 0 100 24">
+            <path d="M0 12 Q 25 0, 50 12 T 100 12" fill="none" stroke="#FFCC00" strokeWidth="2"/>
+          </svg>
         </div>
 
         <p className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 md:mb-24 text-sm sm:text-base px-4 animate-text">
