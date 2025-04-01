@@ -350,15 +350,23 @@ export default function HomePage() {
       {/* Systemic Issues Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6 sm:mb-8">
-          <svg className="w-16 sm:w-20 md:w-24 h-auto hidden sm:block" viewBox="0 0 100 24">
-            <path d="M0 12 Q 25 0, 50 12 T 100 12" fill="none" stroke="#FFCC00" strokeWidth="2"/>
-          </svg>
+          <Image
+            src="/images/wave-decoration.png"
+            alt="Wave decoration left"
+            width={100}
+            height={48}
+            className="w-16 sm:w-20 md:w-24 h-auto hidden sm:block"
+          />
           <h2 className="text-center font-passion-one text-[50px] leading-tight max-w-4xl px-4 animate-title">
             Welcome to Black Co-op CIC, A community-driven cooperative building Black economic empowerment, one step at a time.
           </h2>
-          <svg className="w-16 sm:w-20 md:w-24 h-auto hidden sm:block" viewBox="0 0 100 24">
-            <path d="M0 12 Q 25 24, 50 12 T 100 12" fill="none" stroke="#FFCC00" strokeWidth="2"/>
-          </svg>
+          <Image
+            src="/images/wave-decoration-right.png"
+            alt="Wave decoration right"
+            width={100}
+            height={48}
+            className="w-16 sm:w-20 md:w-24 h-auto hidden sm:block"
+          />
         </div>
 
         <p className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16 text-sm sm:text-base px-4 animate-text">
@@ -503,17 +511,19 @@ export default function HomePage() {
       <section className="py-20 sm:py-24 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-center font-passion-one text-[36px] xs:text-[40px] sm:text-[54px] mb-4 animate-title">Who we are</h2>
         <div className="flex justify-center mb-6">
-          <svg className="w-16 sm:w-20 md:w-24 h-auto" viewBox="0 0 100 24">
-            <path d="M0 12 Q 25 0, 50 12 T 100 12" fill="none" stroke="#FFCC00" strokeWidth="2"/>
-          </svg>
+          <Image
+            src="/images/wave-decoration-3.png"
+            alt="Wave decoration"
+            width={200}
+            height={48}
+            className="w-32 sm:w-40 md:w-48 h-auto"
+          />
         </div>
 
         <p className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 md:mb-24 text-sm sm:text-base px-4 animate-text">
           Black Co-op CIC is a Black-led cooperative dedicated to creating sustainable opportunities for our
           communities. We believe in the power of collective ownership, economic justice, and mutual support. By working
-          together, we aim to build wealth, skills, and self-sufficiency for Black individuals, families, and
-          businesses. Despite the significant Black population in the UK, there are currently no Black-led cooperatives
-          in London or across the country—Black Co-op CIC is here to change that.
+          together, we can build lasting wealth and resilience within London's Black communities.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 px-4">
