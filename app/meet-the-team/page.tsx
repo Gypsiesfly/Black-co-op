@@ -31,7 +31,7 @@ const founders = [
     name: "Sophia",
     role: "Professor & Policy Expert",
     description: "Brings academic expertise and policy insights to cooperative development.",
-    imageSrc: "/images/team-members/maimouna.jpeg"
+    imageSrc: "/images/team-members/sofia.jpg"
   },
   {
     name: "Chino",
