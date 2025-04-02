@@ -18,26 +18,26 @@ const founders = [
   {
     name: "Ken",
     role: "Entrepreneur",
-    description: "Focused on creating sustainable economic opportunities within the Black community.",
-    imageSrc: "/images/team-members/ousmane-diop.jpeg"
+    description: "A visionary entrepreneur with extensive experience in launching and scaling businesses. Ken is passionate about creating sustainable economic opportunities for Black communities through cooperative models.",
+    imageSrc: "/images/team-members/avatar.png"
   },
   {
     name: "Eyinnaya",
     role: "Research & Campaigns Expert",
-    description: "Specializes in identifying and dismantling systemic barriers to economic growth.",
-    imageSrc: "/images/team-members/papa-ndiour.jpeg"
+    description: "With a PhD in Built Environment, Eyinnaya brings a wealth of expertise in research, campaigns, and advocacy. His work focuses on dismantling systemic barriers and promoting equitable urban development.",
+    imageSrc: "/images/team-members/avatar.png"
   },
   {
     name: "Sophia",
     role: "Professor & Policy Expert",
-    description: "Brings academic expertise and policy insights to cooperative development.",
-    imageSrc: "/images/team-members/sofia.jpg"
+    description: "A distinguished professor and policy expert with years of experience in cooperative development. Having previously owned a successful cooperative, Sophia offers invaluable insights into policy frameworks and sustainable cooperative models.",
+    imageSrc: "/images/team-members/avatar.png"
   },
   {
     name: "Chino",
     role: "Pharmacist & Community Health Advocate",
-    description: "Works to improve health access and economic wellbeing in Black communities.",
-    imageSrc: "/images/team-members/cheikh-moneir.jpeg"
+    description: "A dedicated pharmacist aiming to establish a chain of pharmacies within Black communities. Chino's vision is to improve health access and promote cooperative ownership within the healthcare sector.",
+    imageSrc: "/images/team-members/avatar.png"
   }
 ]
 
