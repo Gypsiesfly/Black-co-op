@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   title: 'Black Co-op CIC',
   description: 'Black Co-op CIC is a Black-led cooperative dedicated to creating sustainable opportunities for our communities.',
   icons: {
-    icon: '/images/black-co-op-logo.png',
-    shortcut: '/images/black-co-op-logo.png',
-    apple: '/images/black-co-op-logo.png',
+    icon: '/images/site-icon.png',
+    shortcut: '/images/site-icon.png',
+    apple: '/images/site-icon.png',
   },
 }
 
