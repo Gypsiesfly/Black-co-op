@@ -31,8 +31,13 @@ const harmonyOs = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'BLACK CO-OP',
-  description: 'Advancing Black-Led Cooperative Ownership in London',
+  title: 'Black Co-op CIC',
+  description: 'Black Co-op CIC is a Black-led cooperative dedicated to creating sustainable opportunities for our communities.',
+  icons: {
+    icon: '/images/black-co-op-logo.png',
+    shortcut: '/images/black-co-op-logo.png',
+    apple: '/images/black-co-op-logo.png',
+  },
 }
 
 export default function RootLayout({
