@@ -167,6 +167,9 @@ export default function HomePage() {
           <Link href="/meet-the-team" className="text-white font-medium font-passion-one text-[32px]">
             Meet the team
           </Link>
+          <Link href="/research" className="text-white font-medium font-passion-one text-[32px]">
+            Research
+          </Link>
           <Link
             href="/get-involved"
             className="font-medium px-4 py-1 bg-[#FFCC00] border-2 border-black text-black font-passion-one text-[32px] rounded-[45px]"
@@ -220,6 +223,7 @@ export default function HomePage() {
                 { name: "Home", href: "/" },
                 { name: "Our goal", href: "/our-goal" },
                 { name: "Meet the team", href: "/meet-the-team" },
+                { name: "Research", href: "/research" },
                 { name: "Get Involved", href: "/get-involved" },
               ].map((item) => (
                 <div key={item.name} className="relative w-fit mx-auto">
@@ -306,7 +310,7 @@ export default function HomePage() {
       </div>
 
       {/* Did You Know Section */}
-      <section className="py-20 sm:py-24 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
+      <section className="pt-16 pb-8 sm:pt-20 sm:pb-12 md:pt-24 md:pb-16 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-center font-passion-one font-normal text-3xl xs:text-4xl sm:text-5xl md:text-6xl mb-8 animate-title">DID YOU KNOW?</h2>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
@@ -331,24 +335,66 @@ export default function HomePage() {
           </div>
           <div className="order-1 md:order-2">
             <h3 className="font-passion-one font-normal text-xl xs:text-2xl sm:text-3xl mb-4 animate-text">
-              The UK cooperative movement is 90-95% white-led, with Black and racially minoritised communities likely
-              under 5-10%.
+              Cooperatives empower communities through shared ownership and democratic decision-making.
             </h3>
             <p className="text-base sm:text-lg mb-12 sm:mb-16 animate-text">
-              White professionals are 60 times more likely to hold leadership roles in UK cooperatives, occupying nearly
-              90% of top positions. This imbalance underscores systemic barriers to Black participation and cooperative
-              ownership.
+              The cooperative model has been a powerful tool for economic empowerment worldwide, helping communities build wealth and resilience through collective ownership. By working together, members can achieve more than they could individually.
             </p>
 
             <div className="mb-4">
-              <AnimatedProgressBar percentage={90} leftLabel="White professionals" rightLabel="Black" />
+              <AnimatedProgressBar percentage={100} leftLabel="Community Power" rightLabel="Collective Success" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* UK Democratic Economy Section */}
+      <section className="pt-8 pb-8 sm:pt-12 sm:pb-12 md:pt-16 md:pb-16 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text Content */}
+          <div className="space-y-6">
+            <h2 className="font-passion-one font-normal text-3xl xs:text-4xl sm:text-5xl md:text-6xl mb-8">
+              UK DEMOCRATIC ECONOMY
+            </h2>
+            <div className="space-y-4 text-sm sm:text-base">
+              <p>
+                There are 9,342 – up from 9,313 – independent businesses operating across the UK's democratic economy. 
+                They are co-operatives. They are building societies. They are mutual insurers. They are NHS 
+                Foundation Trusts. They can also be employee-owned.
+              </p>
+              <p>
+                The combined annual income of democratic businesses is £165.7 billion, up from £161.5 billion in 2023. 
+                The democratic economy employs more than 1.3 million. Because of how they operate, democratic 
+                businesses aim to provide better work; work that is more rewarding, empowering, wellbeing-enhancing 
+                livelihoods.
+              </p>
+              <p>
+                There are more than 68.8 million memberships within the democratic economy, up 2.9% on 2023 figures 
+                (66.8 million). It is a number that is only just short of the number of people living in the UK. 
+                Membership is more than a loyalty card. It gives joint ownership and control to the people most 
+                invested in a business' long-term success.
+              </p>
+            </div>
+          </div>
+          
+          {/* Right Column - Image */}
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-md h-auto">
+              <Image
+                src="/images/United Kingdom.svg"
+                alt="United Kingdom Map"
+                width={600}
+                height={600}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Systemic Issues Section */}
-      <section className="py-20 sm:py-24 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
+      <section className="pt-16 sm:pt-20 md:pt-24 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6 sm:mb-8">
           <Image
             src="/images/wave-decoration.png"
@@ -562,7 +608,7 @@ export default function HomePage() {
       <section className="bg-black text-white py-24 sm:py-32 md:py-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <h2 className="font-passion-one text-5xl sm:text-6xl md:text-7xl mb-16 sm:mb-20 text-center animate-title">
-            This project will contribute to:
+            Our vision is to:
           </h2>
           
           {/* Image Cards */}
@@ -570,7 +616,7 @@ export default function HomePage() {
             {/* First Card */}
             <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[500px] w-full animate-card">
               <Image
-                src="/images/economic-justice.png"
+                src="/images/FoxNakai-6080.jpg"
                 alt="Tackling Structural Barriers"
                 fill
                 className="object-cover"
@@ -578,10 +624,10 @@ export default function HomePage() {
                 priority
               />
               <div className="absolute inset-0 bg-black/50 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
-                <h3 className="font-passion-one text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-2xl leading-tight mb-6 animate-title">
-                  Tackling Structural Barriers to Economic Justice
+                <h3 className="font-passion-one text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-2xl leading-tight mb-4 sm:mb-6 animate-title">
+                  Tackle Structural Barriers to Economic Justice
                 </h3>
-                <div className="mt-auto pb-4 sm:pb-6 md:pb-8 lg:pb-0">
+                <div className="mt-2 sm:mt-4 pb-4 sm:pb-6 md:pb-8 lg:pb-0">
                   <Link href="/economic-justice" className="bg-transparent border-2 border-white text-white px-6 py-2 rounded-[45px] font-passion-one text-xl flex items-center gap-2 w-fit hover:bg-white/10 transition-colors animate-button">
                     Learn more
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -595,7 +641,7 @@ export default function HomePage() {
             {/* Second Card */}
             <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[500px] w-full animate-card">
               <Image
-                src="/images/economic-power.png"
+                src="/images/img20210825_13292981.jpg"
                 alt="Building Collective Power"
                 fill
                 className="object-cover"
@@ -603,10 +649,10 @@ export default function HomePage() {
                 priority
               />
               <div className="absolute inset-0 bg-black/50 p-6 sm:p-8 md:p-10 flex flex-col justify-center items-end text-right">
-                <h3 className="font-passion-one text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-2xl leading-tight mb-6 animate-title">
-                  Building Collective Economic Power
+                <h3 className="font-passion-one text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-2xl leading-tight mb-4 sm:mb-6 animate-title">
+                  Build Collective Economic Power
                 </h3>
-                <div className="mt-auto pb-4 sm:pb-6 md:pb-8 lg:pb-0">
+                <div className="mt-2 sm:mt-4 pb-4 sm:pb-6 md:pb-8 lg:pb-0">
                   <Link href="/economic-power" className="bg-transparent border-2 border-white text-white px-6 py-2 rounded-[45px] font-passion-one text-xl flex items-center gap-2 w-fit hover:bg-white/10 transition-colors animate-button">
                     Learn more
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -628,10 +674,10 @@ export default function HomePage() {
                 priority
               />
               <div className="absolute inset-0 bg-black/50 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
-                <h3 className="font-passion-one text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-2xl leading-tight mb-6 animate-title">
-                  Shifting Power to Communities
+                <h3 className="font-passion-one text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-2xl leading-tight mb-4 sm:mb-6 animate-title">
+                  Shift Power to Communities
                 </h3>
-                <div className="mt-auto pb-4 sm:pb-6 md:pb-8 lg:pb-0">
+                <div className="mt-2 sm:mt-4 pb-4 sm:pb-6 md:pb-8 lg:pb-0">
                   <Link href="/communities" className="bg-transparent border-2 border-white text-white px-6 py-2 rounded-[45px] font-passion-one text-xl flex items-center gap-2 w-fit hover:bg-white/10 transition-colors animate-button">
                     Learn more
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

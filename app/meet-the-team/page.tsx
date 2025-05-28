@@ -104,6 +104,9 @@ export default function MeetTheTeamPage() {
               Meet the team
             </Link>
           </div>
+          <Link href="/research" className="text-white font-medium font-passion-one text-[32px] animate-link">
+            Research
+          </Link>
           <Link
             href="/get-involved"
             className="font-medium px-4 py-1 rounded-full bg-[#FFCC00] border-2 border-black text-black font-passion-one text-[32px] animate-link"
@@ -157,6 +160,7 @@ export default function MeetTheTeamPage() {
                 { name: "Home", href: "/" },
                 { name: "Our goal", href: "/our-goal" },
                 { name: "Meet the team", href: "/meet-the-team" },
+                { name: "Research", href: "/research" },
                 { name: "Get Involved", href: "/get-involved" },
               ].map((item) => (
                 <div key={item.name} className="relative w-fit mx-auto animate-mobile-link">

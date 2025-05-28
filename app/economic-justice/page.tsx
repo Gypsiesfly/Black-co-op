@@ -384,7 +384,7 @@ export default function EconomicJusticePage() {
       <section className="bg-black py-16 px-4 md:px-8">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-center font-passion-one text-white text-4xl mb-12">
-            This project will contribute to:
+            Our vision is to:
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             {/* Card 1 */}

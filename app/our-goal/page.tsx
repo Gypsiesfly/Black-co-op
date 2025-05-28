@@ -75,6 +75,9 @@ export default function OurGoalPage() {
           <Link href="/meet-the-team" className="text-white font-medium font-passion-one text-[32px] animate-text">
             Meet the team
           </Link>
+          <Link href="/research" className="text-white font-medium font-passion-one text-[32px] animate-text">
+            Research
+          </Link>
           <Link
             href="/get-involved"
             className="font-medium px-4 py-1 rounded-full bg-[#FFCC00] border-2 border-black text-black font-passion-one text-[32px] animate-text"
@@ -128,6 +131,7 @@ export default function OurGoalPage() {
                 { name: "Home", href: "/" },
                 { name: "Our goal", href: "/our-goal" },
                 { name: "Meet the team", href: "/meet-the-team" },
+                { name: "Research", href: "/research" },
                 { name: "Get Involved", href: "/get-involved" },
               ].map((item) => (
                 <div key={item.name} className="relative w-fit mx-auto">
