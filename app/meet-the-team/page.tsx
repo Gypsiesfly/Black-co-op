@@ -38,6 +38,12 @@ const founders = [
     role: "Pharmacist & Community Health Advocate",
     description: "A dedicated pharmacist aiming to establish a chain of pharmacies within Black communities. Chino's vision is to improve health access and promote cooperative ownership within the healthcare sector.",
     imageSrc: "/images/team-members/avatar.png"
+  },
+  {
+    name: "Dr. Christopher Adrian Johnson",
+    role: "Journalist, Editor & Business Management Consultant",
+    description: "An award-winning journalist, editor, and business management consultant with over 40 years of experience. He holds an MBA in Marketing Management and a Doctorate in Business Management.",
+    imageSrc: "/images/team-members/avatar.png"
   }
 ]
 

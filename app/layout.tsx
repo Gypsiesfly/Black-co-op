@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Passion_One } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
+import ScrollToTop from '@/components/scroll-to-top'
 
 const passionOne = Passion_One({
   weight: ['400', '700'],
@@ -52,6 +53,7 @@ export default function RootLayout({
         <div id="root" suppressHydrationWarning>
           {children}
         </div>
+        <ScrollToTop />
       </body>
     </html>
   )
