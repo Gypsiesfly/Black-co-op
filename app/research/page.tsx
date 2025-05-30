@@ -238,82 +238,19 @@ export default function ResearchPage() {
           <h2 className="font-passion-one text-4xl md:text-5xl text-center mb-12">Publications</h2>
           
           <div className="max-w-4xl mx-auto space-y-8">
-            {/* Publication Item 1 */}
-            <div className="border-b border-gray-200 pb-8">
-              <h3 className="font-passion-one text-2xl mb-2">The State of Black Cooperatives in the UK</h3>
-              <p className="text-gray-600 mb-4">By Dr. Aisha Johnson | June 15, 2024</p>
-              <p className="mb-4">
-                A comprehensive analysis of the current landscape of Black-led cooperatives in the United Kingdom, 
-                examining challenges, opportunities, and the path forward for economic empowerment.
-              </p>
-              <a href="#" className="text-black font-medium hover:underline">
-                Read Full Publication →
-              </a>
-            </div>
-            
-            {/* Publication Item 2 */}
-            <div className="border-b border-gray-200 pb-8">
-              <h3 className="font-passion-one text-2xl mb-2">Community Wealth Building: A Path to Economic Justice</h3>
-              <p className="text-gray-600 mb-4">By Marcus Thompson | May 28, 2024</p>
-              <p className="mb-4">
-                Exploring how community wealth building initiatives can address economic disparities and 
-                create sustainable change in Black communities through cooperative models.
-              </p>
-              <a href="#" className="text-black font-medium hover:underline">
-                Read Full Publication →
-              </a>
-            </div>
-            
-            {/* Publication Item 3 */}
-            <div className="border-b border-gray-200 pb-8">
-              <h3 className="font-passion-one text-2xl mb-2">Policy Barriers to Cooperative Development</h3>
-              <p className="text-gray-600 mb-4">By Dr. Kwame Osei | May 10, 2024</p>
-              <p className="mb-4">
-                An in-depth look at the systemic policy challenges facing Black cooperatives and 
-                recommendations for creating a more supportive regulatory environment.
-              </p>
-              <a href="#" className="text-black font-medium hover:underline">
-                Read Full Publication →
-              </a>
-            </div>
-            
-            {/* Publication Item 4 */}
-            <div className="border-b border-gray-200 pb-8">
-              <h3 className="font-passion-one text-2xl mb-2">Case Studies in Black Cooperative Success</h3>
-              <p className="text-gray-600 mb-4">By Nia Williams | April 22, 2024</p>
-              <p className="mb-4">
-                Inspiring stories of successful Black cooperatives making a difference in their communities, 
-                with key lessons for aspiring cooperative entrepreneurs.
-              </p>
-              <a href="#" className="text-black font-medium hover:underline">
-                Read Full Publication →
-              </a>
-            </div>
-            
-            {/* Publication Item 5 */}
-            <div className="border-b border-gray-200 pb-8">
-              <h3 className="font-passion-one text-2xl mb-2">Education and Training for Cooperative Leadership</h3>
-              <p className="text-gray-600 mb-4">By Dr. Jelani Carter | April 5, 2024</p>
-              <p className="mb-4">
-                A framework for developing the next generation of cooperative leaders through targeted 
-                education and leadership development programs.
-              </p>
-              <a href="#" className="text-black font-medium hover:underline">
-                Read Full Publication →
-              </a>
-            </div>
-            
-            {/* Publication Item 6 */}
+            {/* Publication Item */}
             <div>
-              <h3 className="font-passion-one text-2xl mb-2">Sustainable Development Through Cooperatives</h3>
-              <p className="text-gray-600 mb-4">By Amara Diallo | March 18, 2024</p>
+              <h3 className="font-passion-one text-2xl mb-2">The Black Cooperative Economy: Collective Courage</h3>
+              <p className="text-gray-600 mb-4">By Jessica Gordon Nembhard | 2023</p>
               <p className="mb-4">
-                How cooperative business models can drive sustainable development and environmental 
-                justice in Black communities.
+                A groundbreaking exploration of the history and impact of Black cooperative economics, 
+                highlighting the power of collective action and economic solidarity in Black communities. 
+                This work provides valuable insights into how cooperative models can be leveraged for 
+                economic justice and community empowerment.
               </p>
-              <a href="#" className="text-black font-medium hover:underline">
+              <Link href="/publications/black-cooperative-economy" className="text-black font-medium hover:underline">
                 Read Full Publication →
-              </a>
+              </Link>
             </div>
           </div>
           
