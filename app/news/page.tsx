@@ -272,36 +272,82 @@ export default function NewsPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-black text-white py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1">
-              <Image
-                src="/images/black-co-op-logo-white.png"
-                alt="BLACK CO-OP"
-                width={120}
-                height={30}
-                className="h-8 w-auto mb-4"
-              />
-              <p className="text-gray-400 text-sm">
-                Creating sustainable opportunities for our communities.
-              </p>
+      <footer className="relative bg-black text-white">
+        <div className="absolute inset-0">
+          <Image src="/images/footer-bg.png" alt="Footer background" fill className="object-cover" />
+        </div>
+        <div className="relative z-10 py-8 sm:py-12 px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-black rounded-2xl overflow-hidden">
+              <div className="px-6 sm:px-12 py-8 sm:py-16">
+                <div className="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-16">
+                  {/* Left side - Title and button */}
+                  <div className="mb-8 md:mb-0">
+                    <h3 className="font-passion-one font-normal text-[40px] sm:text-[50px] md:text-[70px] leading-tight mb-4 sm:mb-6 text-white">
+                      Want to know <br />
+                      our <span className="text-[#FFCC00]">goals?</span>
+                    </h3>
+                    <Link
+                      href="/our-goal"
+                      className="bg-transparent border border-white text-white px-6 py-2 rounded-full font-passion-one text-[20px] flex items-center justify-center gap-2 w-fit hover:bg-white/10 transition-colors"
+                    >
+                      Learn more
+                      <div className="relative w-6 h-6">
+                        <Image
+                          src="/images/arrow-icon.svg"
+                          alt=""
+                          width={24}
+                          height={24}
+                          className="w-full h-full invert"
+                        />
+                      </div>
+                    </Link>
+                  </div>
+
+                  {/* Right side - Logo and social icons */}
+                  <div className="flex flex-col items-center">
+                    <div className="mb-4 sm:mb-6 flex flex-col items-center">
+                      <div className="bg-[#FFCC00] p-2 sm:p-3 w-[50px] sm:w-[60px] h-[50px] sm:h-[60px] flex items-center justify-center mb-1">
+                        <Image src="/images/site-icon.png" alt="BLACK CO-OP" width={40} height={40} />
+                      </div>
+                      <div className="text-[6px] text-white text-center leading-tight">
+                        ADVANCING BLACK-LED
+                        <br />
+                        COOPERATIVE
+                        <br />
+                        OWNERSHIP IN LONDON
+                      </div>
+                    </div>
+
+                    <div className="flex gap-2 sm:gap-3">
+                      <Link
+                        href="#"
+                        className="bg-[#FFCC00] w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
+                      >
+                        <Image src="/images/x-icon.svg" alt="X" width={20} height={20} />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="bg-[#FFCC00] w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
+                      >
+                        <Image src="/images/instagram-icon.svg" alt="Instagram" width={20} height={20} />
+                      </Link>
+                      <Link
+                        href="#"
+                        className="bg-[#FFCC00] w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
+                      >
+                        <Image src="/images/email-icon.svg" alt="Email" width={20} height={20} />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Copyright */}
+                <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                  <p>© {new Date().getFullYear()} Black Co-op CIC. All rights reserved.</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="font-bold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><Link href="/about" className="hover:underline">About Us</Link></li>
-                <li><Link href="/projects" className="hover:underline">Our Projects</Link></li>
-                <li><Link href="/get-involved" className="hover:underline">Get Involved</Link></li>
-                <li><Link href="/contact" className="hover:underline">Contact</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Follow Us</h3>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
-            <p> {new Date().getFullYear()} Black Co-op CIC. All rights reserved.</p>
           </div>
         </div>
       </footer>
