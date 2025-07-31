@@ -78,6 +78,9 @@ export default function GetInvolvedPage() {
           <Link href="/meet-the-team" className="text-white font-medium font-passion-one text-[32px]" suppressHydrationWarning>
             Meet the team
           </Link>
+          <Link href="/research" className="text-white font-medium font-passion-one text-[32px]" suppressHydrationWarning>
+            Research
+          </Link>
           <div className="relative" suppressHydrationWarning>
             <Image
               src="/images/hyperlink-team.png"
@@ -143,6 +146,7 @@ export default function GetInvolvedPage() {
                 { name: "Home", href: "/" },
                 { name: "Our goal", href: "/our-goal" },
                 { name: "Meet the team", href: "/meet-the-team" },
+                { name: "Research", href: "/research" },
                 { name: "Get Involved", href: "/get-involved" },
               ].map((item) => (
                 <div key={item.name} className="relative w-fit mx-auto" suppressHydrationWarning>

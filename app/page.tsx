@@ -170,6 +170,9 @@ export default function HomePage() {
           <Link href="/research" className="text-white font-medium font-passion-one text-[32px]">
             Research
           </Link>
+          <Link href="/news" className="text-white font-medium font-passion-one text-[32px]">
+            News
+          </Link>
           <Link
             href="/get-involved"
             className="font-medium px-4 py-1 bg-[#FFCC00] border-2 border-black text-black font-passion-one text-[32px] rounded-[45px]"
@@ -224,6 +227,7 @@ export default function HomePage() {
                 { name: "Our goal", href: "/our-goal" },
                 { name: "Meet the team", href: "/meet-the-team" },
                 { name: "Research", href: "/research" },
+                { name: "News", href: "/news" },
                 { name: "Get Involved", href: "/get-involved" },
               ].map((item) => (
                 <div key={item.name} className="relative w-fit mx-auto">
