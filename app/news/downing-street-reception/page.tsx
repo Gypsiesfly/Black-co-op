@@ -41,7 +41,7 @@ export default function DowningStreetReception() {
             <span className="mx-2">•</span>
             <span>5 min read</span>
           </div>
-          <div className="relative w-full h-96 md:h-[500px] rounded-xl overflow-hidden mb-12">
+          <div className="relative w-full h-96 md:h-[500px] overflow-hidden mb-12">
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
               alt="10 Downing Street building"

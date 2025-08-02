@@ -6,11 +6,11 @@ export default function Platform4Initiative() {
     <div className="bg-white">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <Link 
-            href="/news" 
-            className="text-black hover:underline inline-flex items-center"
-          >
-            ← Back to News
+          <Link href="/news" className="text-[#FFCC00] hover:underline inline-flex items-center">
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to News
           </Link>
         </div>
         
@@ -36,7 +36,7 @@ export default function Platform4Initiative() {
               src="/images/pipeline.jpg"
               alt="Pipeline development"
               fill
-              className="object-cover rounded-none"
+              className="object-cover"
               priority
             />
           </div>
