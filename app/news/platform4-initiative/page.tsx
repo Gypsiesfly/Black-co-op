@@ -16,7 +16,8 @@ export default function Platform4Initiative() {
         
         <article className="prose lg:prose-xl max-w-none">
           <header className="mb-12">
-            <h1 className="text-4xl font-passion-one mb-6">A New Pipeline, But For Whom?</h1>
+            <h1 className="text-4xl font-passion-one mb-2">A New Pipeline, But For Whom?</h1>
+            <h2 className="text-xl text-gray-700 mb-6">Government launches Platform4 to deliver 40,000 homes on surplus railway.</h2>
             <div className="flex justify-between items-center">
               <time dateTime="2025-07-31" className="text-gray-600">July 31, 2025</time>
               <a 
@@ -42,9 +43,14 @@ export default function Platform4Initiative() {
           
           <div className="text-gray-800 space-y-8 text-lg leading-relaxed">
             <p className="text-xl leading-9">
-              At Black Co-operative CIC, our mission is to tackle structural inequalities in land, housing, and asset ownership by building the foundations of a thriving Black-led co-operative economy. So when government initiatives like this emerge, we ask: who benefits? And how can we make sure Black communities are not left behind again?
+            The UK government recently launched Platform4, a new initiative aiming to deliver up to 40,000 new homes by unlocking disused and surplus railway land. Backed by the Department for Transport, Network Rail, and the Department for Levelling Up, Housing and Communities, the platform seeks to attract developers, investors, and local councils to transform redundant rail land into housing.
+
             </p>
             
+            <p className="text-xl leading-9">
+              At Black Co-operative CIC, our mission is to tackle structural inequalities in land, housing, and asset ownership by building the foundations of a thriving Black-led co-operative economy. So when government initiatives like this emerge, we ask: who benefits? And how can we make sure Black communities are not left behind again?
+            </p>
+
             <div className="space-y-4">
               <h2 className="text-2xl font-bold mt-12 mb-6">A New Pipeline, But For Whom?</h2>
               <p>

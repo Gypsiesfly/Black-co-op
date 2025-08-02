@@ -188,8 +188,8 @@ export default function NewsPage() {
                 </a>
               </div>
               <h1 className="text-3xl font-passion-one mb-4">A New Pipeline, But For Whom?</h1>
-              <p className="text-lg text-gray-700 mb-6">
-                Examining the impact of the government's Platform4 initiative on Black communities and the future of cooperative housing.
+              <p className="text-lg text-gray-700 mb-6 line-clamp-3">
+                The UK government recently launched Platform4, a new initiative aiming to deliver up to 40,000 new homes by unlocking disused and surplus railway land...
               </p>
               <a 
                 href="/news/platform4-initiative" 
