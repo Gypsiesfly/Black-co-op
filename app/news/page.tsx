@@ -205,8 +205,8 @@ export default function NewsPage() {
             <div className="bg-white shadow-md overflow-hidden border border-gray-200">
               <div className="relative h-64 w-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="10 Downing Street building"
+                  src="/images/handshake.jpg"
+                  alt="A handshake symbolizing business partnership"
                   fill
                   className="object-cover"
                   priority

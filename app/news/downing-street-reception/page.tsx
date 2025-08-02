@@ -43,14 +43,14 @@ export default function DowningStreetReception() {
           </div>
           <div className="relative w-full h-96 md:h-[500px] overflow-hidden mb-12">
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="10 Downing Street building"
+              src="/images/handshake.jpg"
+              alt="A handshake symbolizing business partnership"
               fill
               className="object-cover"
               priority
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-              <p className="text-white text-sm">Photo by <a href="https://unsplash.com/@cytonn_photography" target="_blank" rel="noopener noreferrer" className="underline">Cytonn Photography</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer" className="underline">Unsplash</a></p>
+              <p className="text-white text-sm">Business partnership</p>
             </div>
           </div>
         </header>
