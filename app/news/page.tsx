@@ -164,39 +164,69 @@ export default function NewsPage() {
 
       {/* News Section */}
       <div className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          {/* News Card */}
-          <div className="mb-16 bg-white shadow-md overflow-hidden border border-gray-200">
-            <div className="relative h-64 w-full">
-              <Image
-                src="/images/pipeline.jpg"
-                alt="Pipeline development"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-8">
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-sm text-gray-600">July 31, 2025</span>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* News Card 1 */}
+            <div className="bg-white shadow-md overflow-hidden border border-gray-200">
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/images/pipeline.jpg"
+                  alt="Pipeline development"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm text-gray-600">July 31, 2025</span>
+                  <a 
+                    href="https://propertyindustryeye.com/government-launches-platform4-to-deliver-40000-homes-on-surplus-railway-land/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-xs text-gray-600 hover:underline"
+                  >
+                    Source: Property Industry Eye
+                  </a>
+                </div>
+                <h2 className="text-2xl font-passion-one mb-3">A New Pipeline, But For Whom?</h2>
+                <p className="text-gray-700 mb-4 line-clamp-3">
+                  The UK government recently launched Platform4, a new initiative aiming to deliver up to 40,000 new homes by unlocking disused and surplus railway land...
+                </p>
                 <a 
-                  href="https://propertyindustryeye.com/government-launches-platform4-to-deliver-40000-homes-on-surplus-railway-land/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-600 hover:underline"
+                  href="/news/platform4-initiative" 
+                  className="inline-block bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition-colors"
                 >
-                  Source: Property Industry Eye
+                  Read Full Article →
                 </a>
               </div>
-              <h1 className="text-3xl font-passion-one mb-4">A New Pipeline, But For Whom?</h1>
-              <p className="text-lg text-gray-700 mb-6 line-clamp-3">
-                The UK government recently launched Platform4, a new initiative aiming to deliver up to 40,000 new homes by unlocking disused and surplus railway land...
-              </p>
-              <a 
-                href="/news/platform4-initiative" 
-                className="inline-block bg-black text-white px-6 py-3 hover:bg-gray-800 transition-colors"
-              >
-                Read Full Article →
-              </a>
+            </div>
+
+            {/* News Card 2 */}
+            <div className="bg-white shadow-md overflow-hidden border border-gray-200">
+              <div className="relative h-64 w-full">
+                <Image
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="10 Downing Street building"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm text-gray-600">June 23, 2025</span>
+                </div>
+                <h2 className="text-2xl font-passion-one mb-3">When Co-ops Come Knocking</h2>
+                <p className="text-gray-700 mb-4 line-clamp-3">
+                  Leaders from across the UK co-operative movement were invited to a reception at 10 Downing Street to talk people-powered, community-rooted business...
+                </p>
+                <a 
+                  href="/news/downing-street-reception" 
+                  className="inline-block bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition-colors"
+                >
+                  Read Full Article →
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -271,86 +301,6 @@ export default function NewsPage() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="relative bg-black text-white">
-        <div className="absolute inset-0">
-          <Image src="/images/footer-bg.png" alt="Footer background" fill className="object-cover" />
-        </div>
-        <div className="relative z-10 py-8 sm:py-12 px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-black rounded-2xl overflow-hidden">
-              <div className="px-6 sm:px-12 py-8 sm:py-16">
-                <div className="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-16">
-                  {/* Left side - Title and button */}
-                  <div className="mb-8 md:mb-0">
-                    <h3 className="font-passion-one font-normal text-[40px] sm:text-[50px] md:text-[70px] leading-tight mb-4 sm:mb-6 text-white">
-                      Want to know <br />
-                      our <span className="text-[#FFCC00]">goals?</span>
-                    </h3>
-                    <Link
-                      href="/our-goal"
-                      className="bg-transparent border border-white text-white px-6 py-2 rounded-full font-passion-one text-[20px] flex items-center justify-center gap-2 w-fit hover:bg-white/10 transition-colors"
-                    >
-                      Learn more
-                      <div className="relative w-6 h-6">
-                        <Image
-                          src="/images/arrow-icon.svg"
-                          alt=""
-                          width={24}
-                          height={24}
-                          className="w-full h-full invert"
-                        />
-                      </div>
-                    </Link>
-                  </div>
-
-                  {/* Right side - Logo and social icons */}
-                  <div className="flex flex-col items-center">
-                    <div className="mb-4 sm:mb-6 flex flex-col items-center">
-                      <div className="bg-[#FFCC00] p-2 sm:p-3 w-[50px] sm:w-[60px] h-[50px] sm:h-[60px] flex items-center justify-center mb-1">
-                        <Image src="/images/site-icon.png" alt="BLACK CO-OP" width={40} height={40} />
-                      </div>
-                      <div className="text-[6px] text-white text-center leading-tight">
-                        ADVANCING BLACK-LED
-                        <br />
-                        COOPERATIVE
-                        <br />
-                        OWNERSHIP IN LONDON
-                      </div>
-                    </div>
-
-                    <div className="flex gap-2 sm:gap-3">
-                      <Link
-                        href="#"
-                        className="bg-[#FFCC00] w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
-                      >
-                        <Image src="/images/x-icon.svg" alt="X" width={20} height={20} />
-                      </Link>
-                      <Link
-                        href="#"
-                        className="bg-[#FFCC00] w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
-                      >
-                        <Image src="/images/instagram-icon.svg" alt="Instagram" width={20} height={20} />
-                      </Link>
-                      <Link
-                        href="#"
-                        className="bg-[#FFCC00] w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
-                      >
-                        <Image src="/images/email-icon.svg" alt="Email" width={20} height={20} />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Copyright */}
-                <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                  <p>© {new Date().getFullYear()} Black Co-op CIC. All rights reserved.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

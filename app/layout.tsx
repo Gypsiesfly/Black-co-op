@@ -3,6 +3,7 @@ import { Passion_One } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import ScrollToTop from '@/components/scroll-to-top'
+import { Footer } from '@/components/footer'
 
 const passionOne = Passion_One({
   weight: ['400', '700'],
@@ -39,6 +40,9 @@ export const metadata: Metadata = {
     shortcut: '/images/site-icon.png',
     apple: '/images/site-icon.png',
   },
+  other: {
+    'material-icons': 'https://fonts.googleapis.com/icon?family=Material+Icons',
+  },
 }
 
 export default function RootLayout({
@@ -49,10 +53,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${passionOne.variable} ${harmonyOs.variable}`} suppressHydrationWarning>
       <head suppressHydrationWarning />
-      <body className="font-harmony-os" suppressHydrationWarning>
-        <div id="root" suppressHydrationWarning>
+      <body className={`${harmonyOs.variable} font-sans antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
+        <div className="flex-grow">
           {children}
         </div>
+        <Footer />
         <ScrollToTop />
       </body>
     </html>
