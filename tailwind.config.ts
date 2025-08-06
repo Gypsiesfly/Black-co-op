@@ -18,6 +18,10 @@ const config = {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      sans: ['var(--font-harmony-os)', 'sans-serif'],
+      'passion-one': ['var(--font-passion-one)', 'sans-serif'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",

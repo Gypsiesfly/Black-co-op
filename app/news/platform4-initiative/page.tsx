@@ -17,7 +17,7 @@ export default function Platform4Initiative() {
         <article className="prose lg:prose-xl max-w-none">
           <header className="mb-12">
             <h1 className="text-4xl font-passion-one mb-2">A New Pipeline, But For Whom?</h1>
-            <h2 className="text-xl text-gray-700 mb-6">Government launches Platform4 to deliver 40,000 homes on surplus railway.</h2>
+            <p className="text-gray-700 mb-6">Government launches Platform4 to deliver 40,000 homes on surplus railway.</p>
             <div className="flex justify-between items-center">
               <time dateTime="2025-07-31" className="text-gray-600">July 31, 2025</time>
               <a 

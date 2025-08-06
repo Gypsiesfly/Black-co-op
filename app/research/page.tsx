@@ -1,241 +1,43 @@
 'use client'
 
-import { Passion_One } from "next/font/google"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { setupScrollAnimations } from "@/utils/scrollAnimation"
 import Link from "next/link"
 
-const passionOne = Passion_One({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-passion-one",
-})
-
 export default function ResearchPage() {
-  const [mounted, setMounted] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeLink, setActiveLink] = useState("")
-
   useEffect(() => {
-    setMounted(true)
-    setActiveLink("Research")
+    setupScrollAnimations()
   }, [])
 
-  if (!mounted) {
-    return (
-      <div className={`min-h-screen ${passionOne.variable}`}>
-        <div className="bg-[#FFCC00] py-1 px-4 text-xs text-black text-left">
-          Want to join the movement?{" "}
-          <Link href="/get-involved" className="underline">
-            Send us a message
-          </Link>
-        </div>
-        <nav className="bg-black py-3 px-4 md:px-8 flex items-center justify-between relative">
-          <div className="flex items-center">
-            <Image 
-              src="/images/black-co-op-logo.png" 
-              alt="BLACK CO-OP" 
-              width={120} 
-              height={30} 
-              className="h-8 w-auto"
-              priority
-            />
-          </div>
-        </nav>
-      </div>
-    )
-  }
-
   return (
-    <div className={`min-h-screen ${passionOne.variable}`}>
-      {/* Top yellow bar */}
-      <div className="bg-[#FFCC00] py-1 px-4 text-xs text-black text-left">
-        Want to join the movement?{" "}
-        <Link href="/get-involved" className="underline">
-          Send us a message
-        </Link>
-      </div>
-
-      {/* Navigation */}
-      <nav className="bg-black py-3 px-4 md:px-8 flex items-center justify-between relative">
-        <div className="flex items-center">
-          <Link href="/">
-            <Image
-              src="/images/black-co-op-logo.png"
-              alt="BLACK CO-OP"
-              width={120}
-              height={30}
-              className="h-8 w-auto"
-            />
-          </Link>
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-6">
-          <Link href="/" className="text-white font-medium font-passion-one text-[32px]">
-            Home
-          </Link>
-          <Link href="/our-goal" className="text-white font-medium font-passion-one text-[32px]">
-            Our goal
-          </Link>
-          <Link href="/meet-the-team" className="text-white font-medium font-passion-one text-[32px]">
-            Meet the team
-          </Link>
-          <div className="relative">
-            <Image
-              src="/images/hyperlink.png"
-              alt=""
-              width={100}
-              height={50}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto h-auto"
-              style={{ width: "100%", height: "auto" }}
-            />
-            <Link
-              href="/research"
-              className="text-white font-medium px-4 py-1 text-white font-passion-one text-[32px] relative z-10"
-            >
-              Research
-            </Link>
-          </div>
-          <Link href="/news" className="text-white font-medium font-passion-one text-[32px]">
-            News
-          </Link>
-          <Link
-            href="/get-involved"
-            className="font-medium px-4 py-1 bg-[#FFCC00] border-2 border-black text-black font-passion-one text-[32px] rounded-[45px]"
-          >
-            Get Involved
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="bg-[#FFCC00] w-12 h-12 flex items-center justify-center"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M6 6L18 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M3 6H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M3 18H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <div
-          className={`fixed top-0 right-0 h-full w-full sm:w-80 bg-black transform transition-transform duration-300 ease-in-out z-50 ${
-            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="p-6 flex flex-col h-full">
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="bg-[#FFCC00] w-12 h-12 flex items-center justify-center self-end"
-              aria-label="Close menu"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M6 6L18 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-
-            <div className="flex flex-col gap-6 mt-8 flex-grow">
-              {[
-                { name: "Home", href: "/" },
-                { name: "Our goal", href: "/our-goal" },
-                { name: "Meet the team", href: "/meet-the-team" },
-                { name: "Research", href: "/research" },
-                { name: "News", href: "/news" },
-                { name: "Get Involved", href: "/get-involved" },
-              ].map((item) => (
-                <div key={item.name} className="relative w-fit mx-auto">
-                  {activeLink === item.name && (
-                    <Image
-                      src="/images/hyperlink.png"
-                      alt=""
-                      width={100}
-                      height={50}
-                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                      style={{ width: "100%", height: "auto" }}
-                    />
-                  )}
-                  <Link
-                    href={item.href}
-                    onClick={() => {
-                      setActiveLink(item.name)
-                      setMobileMenuOpen(false)
-                    }}
-                    className={`font-passion-one text-[28px] sm:text-[32px] relative z-10 block px-4 py-1 rounded-full ${
-                      item.name === "Get Involved"
-                        ? "bg-[#FFCC00] text-black"
-                        : "text-white"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile menu footer */}
-            <div className="mt-auto pt-6 border-t border-white/20">
-              <div className="flex justify-center gap-4 mb-4">
-                <Link href="#" className="bg-[#FFCC00] w-10 h-10 flex items-center justify-center">
-                  <Image src="/images/x-icon.svg" alt="X" width={20} height={20} />
-                </Link>
-                <Link href="#" className="bg-[#FFCC00] w-10 h-10 flex items-center justify-center">
-                  <Image src="/images/instagram-icon.svg" alt="Instagram" width={20} height={20} />
-                </Link>
-                <Link href="#" className="bg-[#FFCC00] w-10 h-10 flex items-center justify-center">
-                  <Image src="/images/email-icon.svg" alt="Email" width={20} height={20} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-black">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row">
-            {/* Left side with text */}
-            <div className="md:w-1/2 px-4 md:px-8 py-8 md:py-32">
-              <h1 className="font-passion-one text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 text-white animate-title">
-                Research and
-                publications
+      <section className="bg-black text-white py-16">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
+          <div className="flex flex-col lg:flex-row items-start gap-8">
+            <div className="w-full lg:w-1/2">
+              <h1 className="font-passion-one text-5xl md:text-6xl lg:text-7xl mb-6">
+                Research & Insights
               </h1>
-              <p className="text-base md:text-lg text-white leading-relaxed max-w-lg mb-8 md:mb-0 animate-text">
+              <p className="text-base md:text-lg text-white leading-relaxed max-w-lg">
                 These are the various publications from our esteemed members, showcasing their remarkable research, innovative ideas, and contributions to the field. Each publication reflects the dedication and expertise of our community, providing valuable insights and knowledge.
               </p>
             </div>
-
-            {/* Right side with image */}
-            <div className="md:w-1/2 relative pb-8 md:pb-0">
-              <div className="relative md:absolute right-0 top-0 md:top-12 md:right-8 md:top-16 w-full md:w-auto">
-                <div className="relative w-full md:w-[492px] h-[250px] md:h-[450px]">
-                  <Image
-                    src="/images/dan-dimmock-3mt71MKGjQ0-unsplash.jpg"
-                    alt="Research and insights on cooperative economics"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                  />
-                </div>
+            <div className="w-full lg:w-1/2">
+              <div className="relative w-full h-64 md:h-96">
+                <Image
+                  src="/images/dan-dimmock-3mt71MKGjQ0-unsplash.jpg"
+                  alt="Research and insights on cooperative economics"
+                  fill
+                  className="object-cover rounded-lg"
+                  priority
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Publications Section */}
       <section className="py-16 bg-white">

@@ -18,7 +18,7 @@ export default function RepresentationPage() {
   return (
     <div className={`min-h-screen ${passionOne.variable}`}>
       {/* Top yellow bar */}
-      <div className="bg-[#FFCC00] py-1 px-4 text-xs text-black text-left">
+      <div className="hidden">
         Want to join the movement?{" "}
         <Link href="/get-involved" className="underline">
           Send us a message
@@ -26,7 +26,7 @@ export default function RepresentationPage() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-black py-3 px-4 md:px-8 flex items-center justify-between relative">
+      <nav className="hidden">
         <div className="flex items-center">
           <Link href="/">
             <Image
@@ -175,7 +175,7 @@ export default function RepresentationPage() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 py-12 px-4 md:px-8 text-white">
+        <div className="relative z-10 text-white">
           <div className="max-w-4xl mx-auto">
             <p className="text-lg mb-12 leading-relaxed text-center">
               Black individuals are severely underrepresented in leadership, policymaking, and cooperative ownership

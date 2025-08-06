@@ -3,7 +3,7 @@
 import { Passion_One } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { setupScrollAnimations } from "@/utils/scrollAnimation"
 
 const passionOne = Passion_One({
@@ -13,162 +13,12 @@ const passionOne = Passion_One({
 })
 
 export default function OurGoalPage() {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeLink, setActiveLink] = useState("Our goal")
-
   useEffect(() => {
-    setIsLoaded(true)
+    setupScrollAnimations()
   }, [])
-
-  useEffect(() => {
-    if (isLoaded) {
-      setupScrollAnimations()
-    }
-  }, [isLoaded])
 
   return (
     <div className={`min-h-screen ${passionOne.variable}`}>
-      {/* Top yellow bar */}
-      <div className="bg-[#FFCC00] py-1 px-4 text-xs text-black text-left animate-text">
-        Want to join the movement?{" "}
-        <Link href="/get-involved" className="underline">
-          Send us a message
-        </Link>
-      </div>
-
-      {/* Navigation */}
-      <nav className="bg-black py-3 px-4 md:px-8 flex items-center justify-between relative">
-        <div className="flex items-center">
-          <Link href="/">
-            <Image
-              src="/images/black-co-op-logo.png"
-              alt="BLACK CO-OP"
-              width={120}
-              height={30}
-              className="h-8 w-auto"
-            />
-          </Link>
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-6">
-          <Link href="/" className="text-white font-medium font-passion-one text-[32px] animate-text">
-            Home
-          </Link>
-          <div className="relative">
-            <Image
-              src="/images/hyperlink.png"
-              alt=""
-              width={100}
-              height={50}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto h-auto"
-              style={{ width: "100%", height: "auto" }}
-            />
-            <Link
-              href="/our-goal"
-              className="text-white font-medium px-4 py-1 text-white font-passion-one text-[32px] relative z-10 animate-text"
-            >
-              Our goal
-            </Link>
-          </div>
-          <Link href="/meet-the-team" className="text-white font-medium font-passion-one text-[32px] animate-text">
-            Meet the team
-          </Link>
-          <Link href="/research" className="text-white font-medium font-passion-one text-[32px] animate-text">
-            Research
-          </Link>
-          <Link href="/news" className="text-white font-medium font-passion-one text-[32px] animate-text">
-            News
-          </Link>
-          <Link
-            href="/get-involved"
-            className="font-medium px-4 py-1 rounded-full bg-[#FFCC00] border-2 border-black text-black font-passion-one text-[32px] animate-text"
-          >
-            Get Involved
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="bg-[#FFCC00] w-12 h-12 flex items-center justify-center"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M6 6L18 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M3 6H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M3 18H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <div
-          className={`fixed top-0 right-0 h-full w-full sm:w-80 bg-black transform transition-transform duration-300 ease-in-out z-50 ${
-            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="p-6 flex flex-col gap-8">
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="bg-[#FFCC00] w-12 h-12 flex items-center justify-center self-end"
-              aria-label="Close menu"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M6 6L18 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-
-            <div className="flex flex-col gap-6 mt-8">
-              {[
-                { name: "Home", href: "/" },
-                { name: "Our goal", href: "/our-goal" },
-                { name: "Meet the team", href: "/meet-the-team" },
-                { name: "Research", href: "/research" },
-                { name: "News", href: "/news" },
-                { name: "Get Involved", href: "/get-involved" },
-              ].map((item) => (
-                <div key={item.name} className="relative w-fit mx-auto">
-                  {activeLink === item.name && (
-                    <Image
-                      src="/images/hyperlink.png"
-                      alt=""
-                      width={100}
-                      height={50}
-                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                      style={{ width: "100%", height: "auto" }}
-                    />
-                  )}
-                  <Link
-                    href={item.href}
-                    onClick={() => {
-                      setActiveLink(item.name)
-                      setMobileMenuOpen(false)
-                    }}
-                    className={`font-passion-one text-[28px] sm:text-[32px] relative z-10 block px-4 py-1 ${
-                      item.name === "Get Involved"
-                        ? "bg-[#FFCC00] text-black rounded-full border-2 border-black"
-                        : "text-white"
-                    } animate-text`}
-                  >
-                    {item.name}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <div className="relative bg-black">

@@ -46,7 +46,7 @@ export default function BlogPage() {
   return (
     <div className={`min-h-screen ${passionOne.variable}`}>
       {/* Top yellow bar */}
-      <div className="bg-[#FFCC00] py-1 px-4 text-xs text-black text-left">
+      <div className="hidden">
         Want to join the movement?{" "}
         <Link href="/get-involved" className="underline">
           Send us a message
@@ -54,7 +54,7 @@ export default function BlogPage() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-black py-3 px-4 md:px-8 flex items-center justify-between relative">
+      <nav className="hidden">
         <div className="flex items-center">
           <Link href="/">
             <Image
@@ -234,7 +234,7 @@ export default function BlogPage() {
       </div>
 
       {/* Footer */}
-      <section className="relative">
+      <section className="hidden">
         <Image src="/images/footer-bg.png" alt="Footer background" fill className="object-cover" />
         <div className="relative z-10 py-8 sm:py-12 px-4">
           <div className="max-w-5xl mx-auto">

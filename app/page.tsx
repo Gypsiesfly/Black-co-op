@@ -2,12 +2,12 @@
 
 import { Passion_One } from "next/font/google"
 import Image from "next/image"
-import { ChevronDown } from "lucide-react"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import { useEffect, useState } from "react"
 import { setupScrollAnimations } from "@/utils/scrollAnimation"
 import { NewsSection } from "@/components/news-section"
+import { Navbar } from "@/components/Navbar"
 
 const AnimatedProgressBar = dynamic(() => import('@/components/animated-progress-bar'), { 
   ssr: false,
@@ -42,22 +42,18 @@ const passionOne = Passion_One({
 
 export default function HomePage() {
   const [mounted, setMounted] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [activeLink, setActiveLink] = useState("Home")
   const [componentsLoaded, setComponentsLoaded] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // Wait for components to load
     Promise.all([
-      AnimatedProgressBar,
-      WaveDecoration,
-      KnowMoreButton,
-      AnimatedCard,
-      LearnMoreButton
-    ].map(component => {
-      return component.preload?.()
-    })).then(() => {
+      import('@/components/animated-progress-bar'),
+      import('@/components/wave-decoration'),
+      import('@/components/know-more-button'),
+      import('@/components/animated-card'),
+      import('@/components/learn-more-button')
+    ]).then(() => {
       setIsLoaded(true);
     }).catch((error) => {
       console.error('Error loading components:', error);
@@ -106,178 +102,13 @@ export default function HomePage() {
   if (!mounted || !componentsLoaded) {
     return (
       <div className={`min-h-screen ${passionOne.variable}`} suppressHydrationWarning>
-        <div className="bg-[#FFCC00] py-1 px-4 text-xs text-black text-left" suppressHydrationWarning>
-          Want to join the movement?{" "}
-          <Link href="/get-involved" className="underline">
-            Send us a message
-          </Link>
-        </div>
-        <nav className="bg-black py-3 px-4 md:px-8 flex items-center justify-between relative">
-          <div className="flex items-center">
-            <Image 
-              src="/images/black-co-op-logo.png" 
-              alt="BLACK CO-OP" 
-              width={120} 
-              height={30} 
-              className="h-8 w-auto"
-              priority
-            />
-          </div>
-        </nav>
+        <Navbar activePath="/" />
       </div>
     )
   }
 
   return (
     <div className={`min-h-screen ${passionOne.variable}`} suppressHydrationWarning>
-      {/* Top yellow bar */}
-      <div className="bg-[#FFCC00] py-1 px-4 text-xs text-black text-left">
-        Want to join the movement?{" "}
-        <Link href="/get-involved" className="underline">
-          Send us a message
-        </Link>
-      </div>
-
-      {/* Navigation */}
-      <nav className="bg-black py-3 px-4 md:px-8 flex items-center justify-between relative">
-        <div className="flex items-center">
-          <Image src="/images/black-co-op-logo.png" alt="BLACK CO-OP" width={120} height={30} className="h-8 w-auto" />
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-6">
-          <div className="relative">
-            <Image
-              src="/images/hyperlink.png"
-              alt=""
-              width={100}
-              height={50}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto h-auto"
-              style={{ width: "100%", height: "auto" }}
-            />
-            <Link
-              href="#"
-              className="text-white font-medium px-4 py-1 text-white font-passion-one text-[32px] relative z-10"
-            >
-              Home
-            </Link>
-          </div>
-          <Link href="/our-goal" className="text-white font-medium font-passion-one text-[32px]">
-            Our goal
-          </Link>
-          <Link href="/meet-the-team" className="text-white font-medium font-passion-one text-[32px]">
-            Meet the team
-          </Link>
-          <Link href="/research" className="text-white font-medium font-passion-one text-[32px]">
-            Research
-          </Link>
-          <Link href="/news" className="text-white font-medium font-passion-one text-[32px]">
-            News
-          </Link>
-          <Link
-            href="/get-involved"
-            className="font-medium px-4 py-1 bg-[#FFCC00] border-2 border-black text-black font-passion-one text-[32px] rounded-[45px]"
-          >
-            Get Involved
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="bg-[#FFCC00] w-12 h-12 flex items-center justify-center"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M6 6L18 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M3 6H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M3 18H21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <div
-          className={`fixed top-0 right-0 h-full w-full sm:w-80 bg-black transform transition-transform duration-300 ease-in-out z-50 ${
-            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="p-6 flex flex-col h-full">
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="bg-[#FFCC00] w-12 h-12 flex items-center justify-center self-end"
-              aria-label="Close menu"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M6 6L18 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-
-            <div className="flex flex-col gap-6 mt-8 flex-grow">
-              {[
-                { name: "Home", href: "/" },
-                { name: "Our goal", href: "/our-goal" },
-                { name: "Meet the team", href: "/meet-the-team" },
-                { name: "Research", href: "/research" },
-                { name: "News", href: "/news" },
-                { name: "Get Involved", href: "/get-involved" },
-              ].map((item) => (
-                <div key={item.name} className="relative w-fit mx-auto">
-                  {activeLink === item.name && (
-                    <Image
-                      src="/images/hyperlink.png"
-                      alt=""
-                      width={100}
-                      height={50}
-                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                      style={{ width: "100%", height: "auto" }}
-                    />
-                  )}
-                  <Link
-                    href={item.href}
-                    onClick={() => {
-                      setActiveLink(item.name)
-                      setMobileMenuOpen(false)
-                    }}
-                    className={`font-passion-one text-[28px] sm:text-[32px] relative z-10 block px-4 py-1 rounded-full ${
-                      item.name === "Get Involved"
-                        ? "bg-[#FFCC00] text-black"
-                        : "text-white"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile menu footer */}
-            <div className="mt-auto pt-6 border-t border-white/20">
-              <div className="flex justify-center gap-4 mb-4">
-                <Link href="#" className="bg-[#FFCC00] w-10 h-10 flex items-center justify-center">
-                  <Image src="/images/x-icon.svg" alt="X" width={20} height={20} />
-                </Link>
-                <Link href="#" className="bg-[#FFCC00] w-10 h-10 flex items-center justify-center">
-                  <Image src="/images/instagram-icon.svg" alt="Instagram" width={20} height={20} />
-                </Link>
-                <Link href="#" className="bg-[#FFCC00] w-10 h-10 flex items-center justify-center">
-                  <Image src="/images/email-icon.svg" alt="Email" width={20} height={20} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <div className="relative min-h-[100vh] sm:min-h-[90vh] md:min-h-[120vh] hero-section" suppressHydrationWarning>
         <Image 
@@ -307,7 +138,9 @@ export default function HomePage() {
             <div className="mt-6 xs:mt-8 sm:mt-12 md:mt-16 lg:mt-20 flex justify-center" suppressHydrationWarning>
               <button className="bg-[#FFCC00] text-black px-4 py-2 xs:px-6 xs:py-3 sm:px-8 sm:py-4 font-passion-one font-normal text-[20px] xs:text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] flex items-center justify-center gap-2 hover:bg-[#e6b800] transition-colors rounded-[45px] animate-button">
                 Keep scrolling
-                <ChevronDown className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                <svg className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
             </div>
           </div>
