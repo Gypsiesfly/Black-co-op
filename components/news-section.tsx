@@ -55,7 +55,25 @@ export function NewsSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* First News Card - Platform4 Initiative */}
+        {/* New Job Posting */}
+        <NewsCard
+          title="Join Our Team: Policy & Research Officer Position Now Open"
+          description="Black Co-op is hiring! We're looking for a Policy & Research Officer to help shape the future of Black-led co-operatives in the UK."
+          date="August 6, 2025"
+          imageUrl="/images/job.jpg"
+          link="/blog/join-our-team-policy-research-officer"
+        />
+        
+        {/* Black Co-op Secures Funding */}
+        <NewsCard
+          title="Black Co-op Secures Funding to Champion Policy Reform and Black Leadership in the Co-operative Sector"
+          description="Black Co-op has been awarded new funding from Trust for London to drive policy reform and Black leadership in the co-operative sector."
+          date="August 6, 2025"
+          imageUrl="/images/handshake.jpg"
+          link="/blog/black-co-op-secures-funding"
+        />
+        
+        {/* Platform4 Initiative */}
         <NewsCard
           title="A New Pipeline, But For Whom?"
           description="Government launches Platform4 to deliver 40,000 homes on surplus railway land. We examine what this means for Black communities."
@@ -64,31 +82,7 @@ export function NewsSection() {
           link="/news/platform4-initiative"
         />
 
-        {/* Second News Card - Downing Street Reception */}
-        <NewsCard
-          title="When Co-ops Come Knocking"
-          description="Leaders from across the UK co-operative movement were invited to a reception at 10 Downing Street to talk people-powered, community-rooted business..."
-          date="June 23, 2025"
-          imageUrl="/images/handshake.jpg"
-          link="/news/downing-street-reception"
-        />
 
-        {/* Third News Card - Coming Soon with Blur */}
-        <div className="relative">
-          <div className="blur-sm">
-            <NewsCard
-              title="Building Economic Resilience"
-              description="Exciting developments coming soon as we work towards building economic resilience in Black communities across London."
-              date="Coming Soon"
-              imageUrl="/images/team-image-3.jpeg"
-              link="#"
-              isComingSoon={true}
-            />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="bg-black text-white px-4 py-2 rounded-md font-medium">Coming Soon</span>
-          </div>
-        </div>
       </div>
 
       <div className="text-center mt-12">
