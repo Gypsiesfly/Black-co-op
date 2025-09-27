@@ -55,13 +55,13 @@ export function NewsSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* New Job Posting */}
+        {/* When Co-ops Come Knocking */}
         <NewsCard
-          title="Join Our Team: Policy & Research Officer Position Now Open"
-          description="Black Co-op is hiring! We're looking for a Policy & Research Officer to help shape the future of Black-led co-operatives in the UK."
-          date="August 6, 2025"
-          imageUrl="/images/job.jpg"
-          link="/blog/join-our-team-policy-research-officer"
+          title="When Co-ops Come Knocking"
+          description="Leaders from across the UK co-operative movement were invited to a reception at 10 Downing Street to talk people-powered, community-rooted business."
+          date="June 23, 2025"
+          imageUrl="/images/handshake.jpg"
+          link="/news/downing-street-reception"
         />
         
         {/* Black Co-op Secures Funding */}
@@ -69,7 +69,7 @@ export function NewsSection() {
           title="Black Co-op Secures Funding to Champion Policy Reform and Black Leadership in the Co-operative Sector"
           description="Black Co-op has been awarded new funding from Trust for London to drive policy reform and Black leadership in the co-operative sector."
           date="August 6, 2025"
-          imageUrl="/images/handshake.jpg"
+          imageUrl="/images/success.jpg"
           link="/blog/black-co-op-secures-funding"
         />
         
@@ -81,8 +81,6 @@ export function NewsSection() {
           imageUrl="/images/pipeline.jpg"
           link="/news/platform4-initiative"
         />
-
-
       </div>
 
       <div className="text-center mt-12">

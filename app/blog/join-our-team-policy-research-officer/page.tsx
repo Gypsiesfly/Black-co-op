@@ -17,11 +17,25 @@ export default function JoinOurTeam() {
         
         <article className="prose lg:prose-xl max-w-none">
           <header className="mb-12">
-            <h1 className="text-4xl font-passion-one mb-2">Join Our Team: Policy & Research Officer Position Now Open</h1>
-            <div className="flex items-center text-gray-600 text-sm mb-8">
+            <h1 className="text-4xl font-passion-one mb-2">Update: Policy & Research Officer Position</h1>
+            <div className="flex items-center text-gray-600 text-sm mb-4">
               <span>6 August 2025</span>
               <span className="mx-2">•</span>
               <span>3 min read</span>
+            </div>
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <svg className="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm text-yellow-700">
+                    This position is no longer accepting applications. Please check our <Link href="/vacancies" className="font-medium text-yellow-700 underline hover:text-yellow-600">vacancies page</Link> for current opportunities.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="relative w-full h-96 md:h-[500px] overflow-hidden mb-12">
               <Image

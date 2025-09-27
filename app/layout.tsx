@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Providers } from './providers';
-import FontInitializer from '@/components/FontInitializer';
+import ClientLayout from './ClientLayout';
 
 export const metadata: Metadata = {
   title: 'Black Co-op CIC',
@@ -24,17 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="font-passion-one">
-      <head>
-        <FontInitializer />
-      </head>
-      <body className="min-h-screen flex flex-col">
-        <div className="flex-grow">
-          <Providers>
-            {children}
-          </Providers>
-        </div>
-      </body>
-    </html>
+    <ClientLayout>
+      {children}
+    </ClientLayout>
   )
 }

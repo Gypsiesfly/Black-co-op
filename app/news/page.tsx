@@ -50,34 +50,7 @@ export default function NewsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* News Card: Join Our Team */}
-            <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
-              <div className="relative h-64 w-full">
-                <Image
-                  src="/images/job.jpg"
-                  alt="Join Our Team - Policy & Research Officer"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-sm text-gray-600">August 6, 2025</span>
-                </div>
-                <h2 className="text-2xl font-passion-one mb-3">Join Our Team: Policy & Research Officer Position Now Open</h2>
-                <p className="text-gray-700 mb-4 line-clamp-3">
-                  Black Co-op is hiring! We're looking for a Policy & Research Officer to help shape the future of Black-led co-operatives in the UK.
-                </p>
-                <Link 
-                  href="/blog/join-our-team-policy-research-officer" 
-                  className="inline-block bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition-colors rounded"
-                >
-                  Read Full Article →
-                </Link>
-              </div>
-            </div>
-            {/* News Card: Black Co-op Secures Funding */}
+            {/* Black Co-op Secures Funding */}
             <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
               <div className="relative h-64 w-full">
                 <Image
@@ -94,7 +67,7 @@ export default function NewsPage() {
                 </div>
                 <h2 className="text-2xl font-passion-one mb-3">Black Co-op Secures Funding to Champion Policy Reform and Black Leadership in the Co-operative Sector</h2>
                 <p className="text-gray-700 mb-4 line-clamp-3">
-                  Black Co-op has been awarded new funding from Trust for London to drive policy reform and Black leadership in the co-operative sector. Read about our vision and what comes next.
+                  Black Co-op has been awarded new funding from Trust for London to drive policy reform and Black leadership in the co-operative sector.
                 </p>
                 <Link 
                   href="/blog/black-co-op-secures-funding" 
@@ -104,7 +77,8 @@ export default function NewsPage() {
                 </Link>
               </div>
             </div>
-            {/* News Card 1 */}
+
+            {/* Platform4 Initiative */}
             <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
               <div className="relative h-64 w-full">
                 <Image
@@ -112,6 +86,7 @@ export default function NewsPage() {
                   alt="Pipeline development"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
               <div className="p-6">
@@ -139,7 +114,7 @@ export default function NewsPage() {
               </div>
             </div>
 
-            {/* News Card 2 */}
+            {/* When Co-ops Come Knocking */}
             <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
               <div className="relative h-64 w-full">
                 <Image
@@ -147,6 +122,7 @@ export default function NewsPage() {
                   alt="Business partnership"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
               <div className="p-6">

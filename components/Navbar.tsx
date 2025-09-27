@@ -151,7 +151,6 @@ export function Navbar({ activePath }: NavbarProps) {
               />
             )}
             <div className="flex items-center">
-              <span className="bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center mr-2">1</span>
               <Link 
                 href="/meet-the-team" 
                 className={`font-passion-one text-[32px] relative z-10 block pr-2 py-1 ${activeLink==='Meet the team' ? 'text-[#FFCC00]' : 'text-white'}`}
@@ -350,9 +349,8 @@ export function Navbar({ activePath }: NavbarProps) {
                       setActiveLink('Meet the team');
                       setShowMobileSubmenu(!showMobileSubmenu);
                     }}
-                    className={`font-passion-one text-[28px] sm:text-[32px] relative z-10 block px-4 py-1 rounded-full ${activeLink==='Meet the team' ? 'text-[#FFCC00]' : 'text-white'} flex items-center`}
+                    className={`font-passion-one text-[28px] sm:text-[32px] relative z-10 block px-4 py-1 rounded-full ${activeLink==='Meet the team' ? 'text-[#FFCC00]' : 'text-white'} flex items-center justify-center w-full`}
                   >
-                    <span className="bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center mr-2">1</span>
                     Meet the team
                     <ChevronDown 
                       className={`ml-1 h-5 w-5 transition-transform duration-200 ${showMobileSubmenu ? 'transform rotate-180' : ''}`} 
@@ -473,7 +471,7 @@ export function Navbar({ activePath }: NavbarProps) {
                 </Link>
               </div>
               <p className="text-center text-white/50 text-sm">
-                © {new Date().getFullYear()} BLACK CO-OP. All rights reserved.
+                {new Date().getFullYear()} BLACK CO-OP. All rights reserved.
               </p>
             </div>
           </div>
