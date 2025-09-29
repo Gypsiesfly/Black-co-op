@@ -22,12 +22,13 @@ export default function KenyanConnectionPage() {
             <p className="text-gray-600">Published on September 29, 2025</p>
           </header>
           
-          <div className="relative w-full h-96 mb-12 rounded-lg overflow-hidden">
+          <div className="relative w-full h-auto mb-12 rounded-lg overflow-hidden">
             <Image
               src="/images/Kenyan Connection.jpg"
               alt="Dr Christopher A. Johnson and Clive Asande in discussion"
-              fill
-              className="object-cover object-top"
+              width={1200}
+              height={800}
+              className="w-full h-auto rounded-lg"
               sizes="(max-width: 768px) 100vw, 80vw"
               priority
             />
