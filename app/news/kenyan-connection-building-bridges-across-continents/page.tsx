@@ -27,13 +27,10 @@ export default function KenyanConnectionPage() {
               src="/images/Kenyan Connection.jpg"
               alt="Dr Christopher A. Johnson and Clive Asande in discussion"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="(max-width: 768px) 100vw, 80vw"
               priority
             />
-            <p className="absolute bottom-0 right-0 bg-black/70 text-white text-xs px-2 py-1">
-              Photo by Unsplash
-            </p>
           </div>
           
           <div className="space-y-6 text-lg leading-relaxed">
