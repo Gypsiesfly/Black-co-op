@@ -50,6 +50,62 @@ export default function NewsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* A New Chapter for Mutual Power */}
+            <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/images/New Chapter 1.jpg"
+                  alt="Co-operative economy report highlights"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm text-gray-600">September 29, 2025</span>
+                </div>
+                <h2 className="text-2xl font-passion-one mb-3">A New Chapter for Mutual Power</h2>
+                <p className="text-gray-700 mb-4 line-clamp-3">
+                  Reflections from Black Co-op on the 2025 Co-operative Economy Report and what it means for the future of collective ownership.
+                </p>
+                <Link 
+                  href="/news/a-new-chapter-for-mutual-power" 
+                  className="inline-block bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition-colors rounded"
+                >
+                  Read Full Article →
+                </Link>
+              </div>
+            </div>
+
+            {/* Kenyan Connection */}
+            <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/images/Kenyan Connection.jpg"
+                  alt="Dr Christopher A. Johnson and Clive Asande in discussion"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm text-gray-600">September 29, 2025</span>
+                </div>
+                <h2 className="text-2xl font-passion-one mb-3">Kenyan Connection: Building Bridges Across Continents</h2>
+                <p className="text-gray-700 mb-4 line-clamp-3">
+                  Dr Christopher A. Johnson meets with Clive Asande, Business Development Manager of Strathmore University Business School, to discuss Fair Trade, co-operatives, and research collaboration.
+                </p>
+                <Link 
+                  href="/news/kenyan-connection-building-bridges-across-continents" 
+                  className="inline-block bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition-colors rounded"
+                >
+                  Read Full Article →
+                </Link>
+              </div>
+            </div>
+
             {/* Black Co-op Secures Funding */}
             <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
               <div className="relative h-64 w-full">

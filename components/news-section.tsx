@@ -55,13 +55,22 @@ export function NewsSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* When Co-ops Come Knocking */}
+        {/* A New Chapter for Mutual Power */}
         <NewsCard
-          title="When Co-ops Come Knocking"
-          description="Leaders from across the UK co-operative movement were invited to a reception at 10 Downing Street to talk people-powered, community-rooted business."
-          date="June 23, 2025"
-          imageUrl="/images/handshake.jpg"
-          link="/news/downing-street-reception"
+          title="A New Chapter for Mutual Power"
+          description="Reflections from Black Co-op on the 2025 Co-operative Economy Report and what it means for the future of collective ownership."
+          date="September 29, 2025"
+          imageUrl="/images/New Chapter 1.jpg"
+          link="/news/a-new-chapter-for-mutual-power"
+        />
+        
+        {/* Kenyan Connection */}
+        <NewsCard
+          title="Kenyan Connection: Building Bridges Across Continents"
+          description="Dr Christopher A. Johnson meets with Strathmore University Business School to discuss Fair Trade, co-operatives, and SME research collaboration."
+          date="September 29, 2025"
+          imageUrl="/images/Kenyan Connection.jpg"
+          link="/news/kenyan-connection-building-bridges-across-continents"
         />
         
         {/* Black Co-op Secures Funding */}
@@ -71,15 +80,6 @@ export function NewsSection() {
           date="August 6, 2025"
           imageUrl="/images/success.jpg"
           link="/blog/black-co-op-secures-funding"
-        />
-        
-        {/* Platform4 Initiative */}
-        <NewsCard
-          title="A New Pipeline, But For Whom?"
-          description="Government launches Platform4 to deliver 40,000 homes on surplus railway land. We examine what this means for Black communities."
-          date="July 31, 2025"
-          imageUrl="/images/pipeline.jpg"
-          link="/news/platform4-initiative"
         />
       </div>
 
