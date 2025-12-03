@@ -30,7 +30,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50 font-passion-one">
+      <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-[9999] font-passion-one">
         <div className="w-full max-w-xs px-4 text-center">
           {/* Logo */}
           <div className="mb-16 flex justify-center">

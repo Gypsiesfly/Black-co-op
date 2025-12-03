@@ -37,7 +37,7 @@ export default function NewsPage() {
                   src="/images/news.jpg"
                   alt="News and updates"
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-cover"
                   priority
                 />
               </div>

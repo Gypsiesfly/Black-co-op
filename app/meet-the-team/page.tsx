@@ -16,27 +16,15 @@ const passionOne = Passion_One({
 // Team member data
 const founders = [
   {
-    name: "Ken",
-    role: "Entrepreneur",
-    description: "A visionary entrepreneur with extensive experience in launching and scaling businesses. Ken is passionate about creating sustainable economic opportunities for Black communities through cooperative models.",
-    imageSrc: "/images/team-members/avatar.png"
-  },
-  {
-    name: "Eyinnaya",
-    role: "Research & Campaigns Expert",
-    description: "With a PhD in Built Environment, Eyinnaya brings a wealth of expertise in research, campaigns, and advocacy. His work focuses on dismantling systemic barriers and promoting equitable urban development.",
-    imageSrc: "/images/team-members/avatar.png"
-  },
-  {
     name: "Sophia",
     role: "Professor & Policy Expert",
     description: "A distinguished professor and policy expert with years of experience in cooperative development. Having previously owned a successful cooperative, Sophia offers invaluable insights into policy frameworks and sustainable cooperative models.",
     imageSrc: "/images/team-members/avatar.png"
   },
   {
-    name: "Chino",
-    role: "Pharmacist & Community Health Advocate",
-    description: "A dedicated pharmacist aiming to establish a chain of pharmacies within Black communities. Chino's vision is to improve health access and promote cooperative ownership within the healthcare sector.",
+    name: "Edna",
+    role: "Research & Campaigns Expert",
+    description: "A dedicated expert in research and campaigns, focusing on dismantling systemic barriers and promoting equitable development. Edna brings extensive experience in advocacy, policy analysis, and community engagement.",
     imageSrc: "/images/team-members/avatar.png"
   },
   {

@@ -30,7 +30,7 @@ export default function ResearchPage() {
                   src="/images/dan-dimmock-3mt71MKGjQ0-unsplash.jpg"
                   alt="Research and insights on cooperative economics"
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-cover"
                   priority
                 />
               </div>

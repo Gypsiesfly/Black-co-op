@@ -136,7 +136,7 @@ export default function HomePage() {
               </div>
             </h1>
             <div className="mt-6 xs:mt-8 sm:mt-12 md:mt-16 lg:mt-20 flex justify-center" suppressHydrationWarning>
-              <button className="bg-[#FFCC00] text-black px-4 py-2 xs:px-6 xs:py-3 sm:px-8 sm:py-4 font-passion-one font-normal text-[20px] xs:text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] flex items-center justify-center gap-2 hover:bg-[#e6b800] transition-colors rounded-[45px] animate-button">
+              <button className="bg-[#FFCC00] text-black px-4 py-2 xs:px-6 xs:py-3 sm:px-8 sm:py-4 font-passion-one font-normal text-[20px] xs:text-[24px] sm:text-[30px] md:text-[36px] lg:text-[40px] flex items-center justify-center gap-2 hover:bg-[#e6b800] transition-colors rounded-[45px] animate-button animate-bounce-scroll">
                 Keep scrolling
                 <svg className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

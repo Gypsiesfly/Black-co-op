@@ -163,7 +163,31 @@ body {
   animation: fade-left 1s ease-out forwards;
 }
 
-.animate-fade-up {
-  animation: fade-up 1s ease-out forwards;
+@keyframes grow-width {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
+.animate-grow-width {
+  animation: grow-width 2s ease-out forwards;
+}
+
+@keyframes bounce-scroll {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-scroll {
+  animation: bounce-scroll 2s infinite;
+}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 interface AnimatedProgressBarProps {
   percentage: number
@@ -9,27 +9,38 @@ interface AnimatedProgressBarProps {
 }
 
 export default function AnimatedProgressBar({ percentage, leftLabel, rightLabel }: AnimatedProgressBarProps) {
-  const [mounted, setMounted] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const elementRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    setMounted(true)
-    // Start animation after mounting
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 100)
-    return () => clearTimeout(timer)
+    const element = elementRef.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+            observer.unobserve(element)
+          }
+        })
+      },
+      { 
+        threshold: 0.3, // Trigger when 30% of the element is visible
+        rootMargin: '50px' // Start animation slightly before element comes into view
+      }
+    )
+
+    observer.observe(element)
+    return () => observer.unobserve(element)
   }, [])
 
-  if (!mounted) return null
-
   return (
-    <div className="flex mb-1 bg-black h-[52px]">
+    <div ref={elementRef} className="flex mb-1 bg-black h-[52px]">
       <div
         className={`${
           isVisible ? "animate-grow-width" : "w-0"
         } bg-[#FFCC00] py-2 px-4 text-black font-medium flex items-center overflow-hidden`}
-        style={{ width: `${percentage}%` }}
       >
         <span className="font-passion-one text-[25px] truncate">{leftLabel}</span>
         <span className="ml-auto">{percentage}%</span>
