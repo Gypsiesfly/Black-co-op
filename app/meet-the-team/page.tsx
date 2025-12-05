@@ -22,15 +22,21 @@ const founders = [
     imageSrc: "/images/team-members/avatar.png"
   },
   {
-    name: "Edna",
+    name: "Edma",
     role: "Research & Campaigns Expert",
-    description: "A dedicated expert in research and campaigns, focusing on dismantling systemic barriers and promoting equitable development. Edna brings extensive experience in advocacy, policy analysis, and community engagement.",
+    description: "A dedicated expert in research and campaigns, focusing on dismantling systemic barriers and promoting equitable development. Edma brings extensive experience in advocacy, policy analysis, and community engagement.",
     imageSrc: "/images/team-members/avatar.png"
   },
   {
     name: "Dr. Christopher Adrian Johnson",
     role: "Journalist, Editor & Business Management Consultant",
     description: "An award-winning journalist, editor, and business management consultant with over 40 years of experience. He holds an MBA in Marketing Management and a Doctorate in Business Management.",
+    imageSrc: "/images/team-members/avatar.png"
+  },
+  {
+    name: "Udoka",
+    role: "Director",
+    description: "A strategic leader focused on steering the cooperative's long-term vision and governance, ensuring accountability and impact across all programmes.",
     imageSrc: "/images/team-members/avatar.png"
   }
 ]
