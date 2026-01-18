@@ -38,6 +38,12 @@ const founders = [
     role: "Director",
     description: "A strategic leader focused on steering the cooperative's long-term vision and governance, ensuring accountability and impact across all programmes.",
     imageSrc: "/images/team-members/avatar.png"
+  },
+  {
+    name: "Augustine Temienor",
+    role: "Staff Member",
+    description: "A dedicated team member contributing to the cooperative's mission and initiatives with expertise and commitment to community development.",
+    imageSrc: "/images/team-members/avatar.png"
   }
 ]
 
