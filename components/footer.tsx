@@ -88,7 +88,8 @@ export function Footer() {
                           className="object-contain h-12 w-auto"
                         />
                       </div>
-                      <div className="bg-black p-3 rounded-lg h-[72px] flex items-center justify-center">
+                      <div className="flex flex-col items-start bg-black p-3 rounded-lg justify-center">
+                        <p className="text-white text-xs mb-1">Proud member of:</p>
                         <Image 
                           src="/coperatives-uk.png" 
                           alt="Cooperatives UK" 
@@ -96,6 +97,7 @@ export function Footer() {
                           height={45}
                           className="object-contain h-8 w-auto"
                         />
+                        <p className="text-white text-xs mt-1">Membership number: M047034</p>
                       </div>
                     </div>
                   </div>
