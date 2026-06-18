@@ -55,6 +55,15 @@ export function NewsSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Co-op Congress 2026 — most recent */}
+        <NewsCard
+          title="Co-operate and we can change the world"
+          description="Two days in Birmingham at Co-op Congress 2026: a movement taking stock, and the conversations that could carry it forward."
+          date="June 13, 2026"
+          imageUrl="/images/blog/congress-2026-hero.jpg"
+          link="/blog/co-op-congress-2026"
+        />
+
         {/* A New Chapter for Mutual Power */}
         <NewsCard
           title="A New Chapter for Mutual Power"
@@ -71,15 +80,6 @@ export function NewsSection() {
           date="September 29, 2025"
           imageUrl="/images/Kenyan Connection.jpg"
           link="/news/kenyan-connection-building-bridges-across-continents"
-        />
-        
-        {/* Black Co-op Secures Funding */}
-        <NewsCard
-          title="Black Co-op Secures Funding to Champion Policy Reform and Black Leadership in the Co-operative Sector"
-          description="Black Co-op has been awarded new funding from Trust for London to drive policy reform and Black leadership in the co-operative sector."
-          date="August 6, 2025"
-          imageUrl="/images/success.jpg"
-          link="/blog/black-co-op-secures-funding"
         />
       </div>
 

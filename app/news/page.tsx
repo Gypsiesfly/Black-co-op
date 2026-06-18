@@ -50,6 +50,34 @@ export default function NewsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Co-op Congress 2026 — most recent */}
+            <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/images/blog/congress-2026-hero.jpg"
+                  alt="Co-op Congress 2026 at The Eastside Rooms, Birmingham"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm text-gray-600">June 13, 2026</span>
+                </div>
+                <h2 className="text-2xl font-passion-one mb-3">Co-operate and we can change the world</h2>
+                <p className="text-gray-700 mb-4 line-clamp-3">
+                  Two days in Birmingham at Co-op Congress 2026: a movement taking stock, and the conversations that could carry it forward.
+                </p>
+                <Link
+                  href="/blog/co-op-congress-2026"
+                  className="inline-block bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition-colors rounded"
+                >
+                  Read Full Article →
+                </Link>
+              </div>
+            </div>
+
             {/* A New Chapter for Mutual Power */}
             <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
               <div className="relative h-64 w-full">

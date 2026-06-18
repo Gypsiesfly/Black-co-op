@@ -14,6 +14,14 @@ const passionOne = Passion_One({
 // Blog post data - you can expand this as you add more posts
 const blogPosts = [
   {
+    id: 0,
+    title: "Co-operate and we can change the world",
+    excerpt: "Two days in Birmingham at Co-op Congress 2026: a movement taking stock, and the conversations that could carry it forward.",
+    date: "June 13, 2026",
+    imageSrc: "/images/blog/congress-2026-hero.jpg",
+    slug: "co-op-congress-2026",
+  },
+  {
     id: 1,
     title: "Breaking Barriers: The Rise of Black-Led Cooperatives",
     excerpt: "Exploring the growing movement of Black-led cooperatives and their impact on economic justice.",

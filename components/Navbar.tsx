@@ -95,7 +95,7 @@ export function Navbar({ activePath }: NavbarProps) {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-4 2xl:gap-6">
             <div className="relative">
               {activeLink === 'Home' && (
                 <Image
@@ -109,7 +109,7 @@ export function Navbar({ activePath }: NavbarProps) {
               )}
               <Link 
                 href="/" 
-                className={`font-passion-one text-[32px] relative z-10 block px-4 py-1 text-white`}
+                className={`font-passion-one text-[18px] xl:text-[24px] 2xl:text-[32px] relative z-10 block px-2 xl:px-3 2xl:px-4 py-1 text-white whitespace-nowrap`}
                 onClick={() => setActiveLink('Home')}
               >
                 Home
@@ -129,7 +129,7 @@ export function Navbar({ activePath }: NavbarProps) {
               )}
               <Link 
                 href="/our-goal" 
-                className={`font-passion-one text-[32px] relative z-10 block px-4 py-1 text-white`}
+                className={`font-passion-one text-[18px] xl:text-[24px] 2xl:text-[32px] relative z-10 block px-2 xl:px-3 2xl:px-4 py-1 text-white whitespace-nowrap`}
                 onClick={() => setActiveLink('Our goal')}
               >
                 Our goal
@@ -150,7 +150,7 @@ export function Navbar({ activePath }: NavbarProps) {
               <div className="flex items-center">
                 <Link 
                   href="/meet-the-team" 
-                  className={`font-passion-one text-[32px] relative z-10 block pr-2 py-1 ${activeLink==='Meet the team' ? 'text-[#FFCC00]' : 'text-white'}`}
+                  className={`font-passion-one text-[18px] xl:text-[24px] 2xl:text-[32px] relative z-10 block pr-1 xl:pr-2 py-1 whitespace-nowrap ${activeLink==='Meet the team' ? 'text-[#FFCC00]' : 'text-white'}`}
                   onClick={() => setActiveLink('Meet the team')}
                 >
                   Meet the team
@@ -190,7 +190,7 @@ export function Navbar({ activePath }: NavbarProps) {
               )}
               <Link 
                 href="/research" 
-                className={`font-passion-one text-[32px] relative z-10 block px-4 py-1 text-white`}
+                className={`font-passion-one text-[18px] xl:text-[24px] 2xl:text-[32px] relative z-10 block px-2 xl:px-3 2xl:px-4 py-1 text-white whitespace-nowrap`}
                 onClick={() => setActiveLink('Research')}
               >
                 Research
@@ -210,7 +210,7 @@ export function Navbar({ activePath }: NavbarProps) {
               )}
               <Link 
                 href="/news" 
-                className={`font-passion-one text-[32px] relative z-10 block px-4 py-1 text-white`}
+                className={`font-passion-one text-[18px] xl:text-[24px] 2xl:text-[32px] relative z-10 block px-2 xl:px-3 2xl:px-4 py-1 text-white whitespace-nowrap`}
                 onClick={() => setActiveLink('News')}
               >
                 News
@@ -230,7 +230,7 @@ export function Navbar({ activePath }: NavbarProps) {
               )}
               <Link
                 href="/get-involved"
-                className="font-passion-one text-[32px] relative z-10 block px-4 py-1 bg-[#FFCC00] border-2 border-black text-black rounded-[45px] hover:bg-yellow-400 transition-colors"
+                className="font-passion-one text-[18px] xl:text-[24px] 2xl:text-[32px] relative z-10 block px-3 xl:px-4 py-1 bg-[#FFCC00] border-2 border-black text-black rounded-[45px] hover:bg-yellow-400 transition-colors whitespace-nowrap"
                 onClick={() => setActiveLink('Get Involved')}
               >
                 Get Involved
