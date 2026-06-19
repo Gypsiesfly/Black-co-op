@@ -16,9 +16,9 @@ const passionOne = Passion_One({
 // Team member data
 const founders = [
   {
-    name: "Sophia",
-    role: "Professor & Policy Expert",
-    description: "A distinguished professor and policy expert with years of experience in cooperative development. Having previously owned a successful cooperative, Sophia offers invaluable insights into policy frameworks and sustainable cooperative models.",
+    name: "Chi Oli",
+    role: "Project Manager",
+    description: "She supports the coordination and delivery of the organisation's core programme of work, spanning community engagement, research, and policy action, helping to build the infrastructure and partnerships needed to connect Black communities to the cooperative movement.",
     imageSrc: "/images/team-members/avatar.png"
   },
   {
