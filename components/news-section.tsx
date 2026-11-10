@@ -55,31 +55,32 @@ export function NewsSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Co-op Congress 2026 — most recent */}
+        {/* Africa's Co-operative Legacy — most recent */}
+        <NewsCard
+          title="Africa’s Co-operative Legacy: from collective tradition to modern entrepreneurship"
+          description="Join Black Co-op CIC and the University of East London on Tuesday 17 November for an evening exploring how African and migrant communities have shaped British enterprise and the co-operative movement — and what comes next."
+          date="November 17, 2026"
+          imageUrl="/images/blog/africas-cooperative-legacy-hero.jpg"
+          link="/blog/africas-cooperative-legacy"
+          imageClassName="object-top"
+        />
+
+        {/* Small Business Sunday */}
+        <NewsCard
+          title="Small business, good growth in every postcode"
+          description="Black Co-op CIC joined Labour Business for Small Business Sunday at Labour Party Conference in Liverpool, where the Business Secretary set out his pitch to be the champion of small firms in Cabinet."
+          date="September 27, 2026"
+          imageUrl="/images/blog/small-business-sunday-hero.jpg"
+          link="/blog/small-business-sunday"
+        />
+
+        {/* Co-op Congress 2026 */}
         <NewsCard
           title="Co-operate and we can change the world"
           description="Two days in Birmingham at Co-op Congress 2026: a movement taking stock, and the conversations that could carry it forward."
           date="June 13, 2026"
           imageUrl="/images/blog/congress-2026-hero.jpg"
           link="/blog/co-op-congress-2026"
-        />
-
-        {/* A New Chapter for Mutual Power */}
-        <NewsCard
-          title="A New Chapter for Mutual Power"
-          description="Reflections from Black Co-op on the 2025 Co-operative Economy Report and what it means for the future of collective ownership."
-          date="September 29, 2025"
-          imageUrl="/images/New Chapter 1.jpg"
-          link="/news/a-new-chapter-for-mutual-power"
-        />
-        
-        {/* Kenyan Connection */}
-        <NewsCard
-          title="Kenyan Connection: Building Bridges Across Continents"
-          description="Dr Christopher A. Johnson meets with Strathmore University Business School to discuss Fair Trade, co-operatives, and SME research collaboration."
-          date="September 29, 2025"
-          imageUrl="/images/Kenyan Connection.jpg"
-          link="/news/kenyan-connection-building-bridges-across-continents"
         />
       </div>
 

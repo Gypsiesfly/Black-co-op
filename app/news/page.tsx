@@ -50,7 +50,63 @@ export default function NewsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Co-op Congress 2026 — most recent */}
+            {/* Africa's Co-operative Legacy — most recent */}
+            <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/images/blog/africas-cooperative-legacy-hero.jpg"
+                  alt="Event flyer: Africa's Co-operative Legacy, Tuesday 17 November 2026, UEL Stratford Campus"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm text-gray-600">November 17, 2026</span>
+                </div>
+                <h2 className="text-2xl font-passion-one mb-3">Africa&rsquo;s Co-operative Legacy: from collective tradition to modern entrepreneurship</h2>
+                <p className="text-gray-700 mb-4 line-clamp-3">
+                  Join Black Co-op CIC and the University of East London on Tuesday 17 November for an evening exploring how African and migrant communities have shaped British enterprise and the co-operative movement — and what comes next.
+                </p>
+                <Link
+                  href="/blog/africas-cooperative-legacy"
+                  className="inline-block bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition-colors rounded"
+                >
+                  Read Full Article →
+                </Link>
+              </div>
+            </div>
+
+            {/* Small Business Sunday */}
+            <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
+              <div className="relative h-64 w-full">
+                <Image
+                  src="/images/blog/small-business-sunday-hero.jpg"
+                  alt="Speaker at the podium beside the Workday banner at Small Business Sunday"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-sm text-gray-600">September 27, 2026</span>
+                </div>
+                <h2 className="text-2xl font-passion-one mb-3">Small business, good growth in every postcode</h2>
+                <p className="text-gray-700 mb-4 line-clamp-3">
+                  Black Co-op CIC joined Labour Business for Small Business Sunday at Labour Party Conference in Liverpool, where the Business Secretary set out his pitch to be the champion of small firms in Cabinet.
+                </p>
+                <Link
+                  href="/blog/small-business-sunday"
+                  className="inline-block bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition-colors rounded"
+                >
+                  Read Full Article →
+                </Link>
+              </div>
+            </div>
+
+            {/* Co-op Congress 2026 */}
             <div className="bg-white shadow-md overflow-hidden border border-gray-200 rounded-lg">
               <div className="relative h-64 w-full">
                 <Image

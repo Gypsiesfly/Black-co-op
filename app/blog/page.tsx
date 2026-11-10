@@ -15,6 +15,23 @@ const passionOne = Passion_One({
 const blogPosts = [
   {
     id: 0,
+    title: "Africa’s Co-operative Legacy: from collective tradition to modern entrepreneurship",
+    excerpt: "Join Black Co-op CIC and the University of East London on Tuesday 17 November for an evening exploring how African and migrant communities have shaped British enterprise and the co-operative movement — and what comes next.",
+    date: "November 17, 2026",
+    imageSrc: "/images/blog/africas-cooperative-legacy-hero.jpg",
+    slug: "africas-cooperative-legacy",
+    imageClassName: "object-top",
+  },
+  {
+    id: 1,
+    title: "Small business, good growth in every postcode",
+    excerpt: "Black Co-op CIC joined Labour Business for Small Business Sunday at Labour Party Conference in Liverpool, where the Business Secretary set out his pitch to be the champion of small firms in Cabinet.",
+    date: "September 27, 2026",
+    imageSrc: "/images/blog/small-business-sunday-hero.jpg",
+    slug: "small-business-sunday",
+  },
+  {
+    id: 2,
     title: "Co-operate and we can change the world",
     excerpt: "Two days in Birmingham at Co-op Congress 2026: a movement taking stock, and the conversations that could carry it forward.",
     date: "June 13, 2026",
@@ -22,7 +39,7 @@ const blogPosts = [
     slug: "co-op-congress-2026",
   },
   {
-    id: 1,
+    id: 3,
     title: "Breaking Barriers: The Rise of Black-Led Cooperatives",
     excerpt: "Exploring the growing movement of Black-led cooperatives and their impact on economic justice.",
     date: "March 15, 2023",
@@ -30,7 +47,7 @@ const blogPosts = [
     slug: "blog-1",
   },
   {
-    id: 2,
+    id: 4,
     title: "Community Wealth Building: A Path Forward",
     excerpt: "How cooperative models are creating sustainable wealth in underserved communities.",
     date: "April 22, 2023",
@@ -38,7 +55,7 @@ const blogPosts = [
     slug: "blog-2",
   },
   {
-    id: 3,
+    id: 5,
     title: "Policy Changes Needed for Cooperative Growth",
     excerpt: "Examining the policy barriers that limit Black cooperative development and proposed solutions.",
     date: "May 10, 2023",
@@ -210,7 +227,7 @@ export default function BlogPage() {
                       src={post.imageSrc || "/placeholder.svg"}
                       alt={post.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={`object-cover transition-transform duration-500 group-hover:scale-105 ${post.imageClassName || ""}`}
                       onError={(e) => {
                         e.currentTarget.src = "/placeholder.svg?height=300&width=400"
                       }}

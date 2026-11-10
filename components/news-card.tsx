@@ -8,9 +8,10 @@ interface NewsCardProps {
   imageUrl: string;
   link: string;
   isComingSoon?: boolean;
+  imageClassName?: string;
 }
 
-export function NewsCard({ title, description, date, imageUrl, link, isComingSoon = false }: NewsCardProps) {
+export function NewsCard({ title, description, date, imageUrl, link, isComingSoon = false, imageClassName = "" }: NewsCardProps) {
   return (
     <div className="bg-white overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
       <div className="relative h-48 w-full">
@@ -18,7 +19,7 @@ export function NewsCard({ title, description, date, imageUrl, link, isComingSoo
           src={imageUrl}
           alt={title}
           fill
-          className="object-cover"
+          className={`object-cover ${imageClassName}`}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         {isComingSoon && (
